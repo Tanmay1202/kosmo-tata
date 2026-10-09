@@ -3,16 +3,42 @@ import Image from "next/image";
 export default function DealerLocatorPage() {
   const branches = [
     {
-      name: "Kosmo Tata Jalandhar (Head Branch)",
-      address: "G.T. Road, Jalandhar, Punjab 144001",
-      phone: "+91 98765 43210",
-      hours: "09:30 AM - 07:00 PM (Mon-Sun)",
-      manager: "Mr. Ramesh Kumar",
-      managerPhone: "+91 98765 43211",
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109066.41951559134!2d75.50294103131751!3d31.322384795079632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a5747a9eb91%3A0xc74b34c05aa5b4b8!2sJalandhar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1714567890123!5m2!1sen!2sin"
+        "name": "Kosmo Tata Jalandhar",
+        "address": "Kosmo Tata Motors, GT Road Jalandhar",
+        "phone": "+91 70451-69141, +91 75060-21479",
+        "hours": "09:30 AM - 07:00 PM (Mon-Sun)",
+        "manager": "Umesh Arora",
+        "managerPhone": "+91 75270-04021",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109066.41951559134!2d75.50294103131751!3d31.322384795079632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a5747a9eb91%3A0xc74b34c05aa5b4b8!2sJalandhar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1714567890123!5m2!1sen!2sin"
     },
-    // Add more branches if needed
-  ];
+    {
+        "name": "Kosmo JP Mobility - Ludhiana",
+        "address": "📍 G.T. Road, Dhandari Kalan, Ludhiana – 141014 | 📍 Ikom Avenue, Chandigarh Road, Samrala – 141114",
+        "phone": "+91 9167058038, +91 8291023882",
+        "hours": "09:30 AM - 07:00 PM (Mon-Sun)",
+        "manager": "Raghav Ahuja",
+        "managerPhone": "+91 97800-26839",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109670.36015525946!2d75.77259163273188!3d30.900965039234197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a837462345a7d%3A0x681102348ec60610!2sLudhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1714567890124!5m2!1sen!2sin"
+    },
+    {
+        "name": "Kosmo Dasuya",
+        "address": "GT Road Dasuya",
+        "phone": "+91 91673-72329, +91 91673-36882, +91 61884-25228",
+        "hours": "09:30 AM - 07:00 PM (Mon-Sun)",
+        "manager": "Pritpal Mehta",
+        "managerPhone": "+91 78883-98875",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108253.2513904975!2d75.59012301032732!3d31.81530948967268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b790d9b4b0ba9%3A0x9d11516fc4ea4a48!2sDasuya%2C%20Punjab!5e0!3m2!1sen!2sin!4v1714567890125!5m2!1sen!2sin"
+    },
+    {
+        "name": "Kosmo Hoshiarpur",
+        "address": "245, Main Jalandhar Road, Singriwal Hoshiarpur - 146022",
+        "phone": "+91 91673-72329, +91 91673-36882, +91 61884-25228",
+        "hours": "09:30 AM - 07:00 PM (Mon-Sun)",
+        "manager": "Pawan Naialwal",
+        "managerPhone": "Not Available",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108846.52900742127!2d75.95254130000001!3d31.5332822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b07f87a329d29%3A0x364177b90d346048!2sHoshiarpur%2C%20Punjab!5e0!3m2!1sen!2sin!4v1714567890126!5m2!1sen!2sin"
+    }
+];
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
@@ -32,7 +58,7 @@ export default function DealerLocatorPage() {
               <div className="p-8 lg:w-1/3 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Head Branch</span>
+                    {index === 0 && <span className="bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Head Branch</span>}
                   </div>
                   <h2 className="text-2xl font-bold text-slate-900 mb-6">{branch.name}</h2>
                   
@@ -56,12 +82,12 @@ export default function DealerLocatorPage() {
                   <h4 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4">Leadership Team</h4>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 font-bold text-xl">
-                      {branch.manager.charAt(4)}
+                      {branch.manager.charAt(0)}
                     </div>
                     <div>
                       <p className="font-bold text-slate-900">{branch.manager}</p>
                       <p className="text-sm text-slate-500 mb-1">General Manager</p>
-                      <a href={`tel:${branch.managerPhone}`} className="text-sm font-medium text-slate-900 hover:underline">{branch.managerPhone}</a>
+                      {branch.managerPhone !== "Not Available" ? <a href={`tel:${branch.managerPhone}`} className="text-sm font-medium text-slate-900 hover:underline">{branch.managerPhone}</a> : <span className="text-sm font-medium text-slate-500">Not Available</span>}
                     </div>
                   </div>
                 </div>

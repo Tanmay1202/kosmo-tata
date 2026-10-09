@@ -43,8 +43,8 @@ export default function ContactUsPage({
                 
                 <div>
                   <h4 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Phone</h4>
-                  <a href="tel:+919876543210" className="text-slate-900 font-medium hover:underline">
-                    +91 98765 43210
+                  <a href="tel:+917045169141" className="text-slate-900 font-medium hover:underline">
+                    +91 70451-69141
                   </a>
                 </div>
                 
