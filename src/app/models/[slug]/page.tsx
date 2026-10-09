@@ -239,59 +239,95 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
             <p className="text-gray-400 mt-4 max-w-2xl mx-auto">Discover the unparalleled engineering behind the {vehicle.name}. Everything you need to know about its performance, dimensions, and capability.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-t border-gray-800 pt-12">
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-tata-blue mb-4">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <h3 className="text-xl font-bold uppercase tracking-wider text-white">Engine</h3>
+          {vehicle.detailedSpecs ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 border-t border-gray-800 pt-12">
+              
+              {/* Engine */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 text-tata-blue mb-4">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  <h3 className="text-xl font-bold uppercase tracking-wider text-white">Engine & Transmission</h3>
+                </div>
+                <ul className="space-y-4 text-gray-400">
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Displacement</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.engine.displacement}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Max Power</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.engine.maxPower}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Max Torque</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.engine.maxTorque}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Cylinders</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.engine.cylinders}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Transmission</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.engine.transmission}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Drive Modes</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.engine.driveModes}</span></li>
+                </ul>
               </div>
-              <ul className="space-y-4 text-gray-400">
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Type</span> <span className="text-white font-medium text-right">{vehicle.engineSpecs?.engineOrBattery}</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Max Power</span> <span className="text-white font-medium text-right">{vehicle.engineSpecs?.power}</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Drive Modes</span> <span className="text-white font-medium text-right">Eco, City, Sport</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Transmission</span> <span className="text-white font-medium text-right">Auto / Manual</span></li>
-              </ul>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-tata-blue mb-4">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21.21 15.89A10 10 0 1 1 8 2.83M22 12A10 10 0 0 0 12 2v10z"/></svg>
-                <h3 className="text-xl font-bold uppercase tracking-wider text-white">Dimensions</h3>
+              
+              {/* Dimensions */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 text-tata-blue mb-4">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21.21 15.89A10 10 0 1 1 8 2.83M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                  <h3 className="text-xl font-bold uppercase tracking-wider text-white">Dimensions & Capacity</h3>
+                </div>
+                <ul className="space-y-4 text-gray-400">
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Length</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.dimensions.length}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Width</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.dimensions.width}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Height</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.dimensions.height}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Wheelbase</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.dimensions.wheelbase}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Ground Clearance</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.dimensions.groundClearance}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Boot Space</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.dimensions.bootSpace}</span></li>
+                </ul>
               </div>
-              <ul className="space-y-4 text-gray-400">
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Length</span> <span className="text-white font-medium text-right">3990 mm - 4661 mm</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Width</span> <span className="text-white font-medium text-right">1811 mm - 1894 mm</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Height</span> <span className="text-white font-medium text-right">1606 mm - 1786 mm</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Ground Clr.</span> <span className="text-white font-medium text-right">{vehicle.engineSpecs?.groundClearance}</span></li>
-              </ul>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-tata-blue mb-4">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <h3 className="text-xl font-bold uppercase tracking-wider text-white">Capacity</h3>
+              
+              {/* Safety */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 text-tata-blue mb-4">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <h3 className="text-xl font-bold uppercase tracking-wider text-white">Safety</h3>
+                </div>
+                <ul className="space-y-4 text-gray-400">
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Airbags</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.safety.airbags}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>ABS with EBD</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.safety.absEbd}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>ESP</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.safety.esp}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>GNCAP Rating</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.safety.gncapRating}</span></li>
+                </ul>
+                
+                <div className="flex items-center gap-4 text-tata-blue mb-4 mt-8">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  <h3 className="text-xl font-bold uppercase tracking-wider text-white">Suspension & Brakes</h3>
+                </div>
+                <ul className="space-y-4 text-gray-400">
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Front Susp.</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.suspensionAndBrakes.frontSuspension}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Rear Susp.</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.suspensionAndBrakes.rearSuspension}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Front Brakes</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.suspensionAndBrakes.frontBrakes}</span></li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2"><span>Rear Brakes</span> <span className="text-white font-medium text-right">{vehicle.detailedSpecs.suspensionAndBrakes.rearBrakes}</span></li>
+                </ul>
               </div>
-              <ul className="space-y-4 text-gray-400">
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Seating</span> <span className="text-white font-medium text-right">5 - 7 Person</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Boot Space</span> <span className="text-white font-medium text-right">{vehicle.engineSpecs?.bootCapacity}</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Fuel Tank</span> <span className="text-white font-medium text-right">44 - 50 Litres</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Wheels</span> <span className="text-white font-medium text-right">R16 - R19 Alloys</span></li>
-              </ul>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-tata-blue mb-4">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <h3 className="text-xl font-bold uppercase tracking-wider text-white">Safety</h3>
+
+              {/* Key Features */}
+              <div className="space-y-6 md:col-span-2 lg:col-span-3 border-t border-gray-800 pt-8 mt-4">
+                <div className="flex items-center gap-4 text-tata-blue mb-4">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <h3 className="text-xl font-bold uppercase tracking-wider text-white">Key Features</h3>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <span className="block text-sm text-gray-400 mb-1">Infotainment</span>
+                    <span className="text-white font-medium text-lg">{vehicle.detailedSpecs.keyFeatures.infotainment}</span>
+                  </div>
+                  <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <span className="block text-sm text-gray-400 mb-1">Instrument Cluster</span>
+                    <span className="text-white font-medium text-lg">{vehicle.detailedSpecs.keyFeatures.instrumentCluster}</span>
+                  </div>
+                  <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <span className="block text-sm text-gray-400 mb-1">Sound System</span>
+                    <span className="text-white font-medium text-lg">{vehicle.detailedSpecs.keyFeatures.soundSystem}</span>
+                  </div>
+                  <div className="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <span className="block text-sm text-gray-400 mb-1">Comfort & Convenience</span>
+                    <span className="text-white font-medium text-lg">{vehicle.detailedSpecs.keyFeatures.comfort}</span>
+                  </div>
+                </div>
               </div>
-              <ul className="space-y-4 text-gray-400">
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Airbags</span> <span className="text-white font-medium text-right">Up to 6</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>Braking</span> <span className="text-white font-medium text-right">ABS with EBD</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>ESP</span> <span className="text-white font-medium text-right">Standard</span></li>
-                <li className="flex justify-between border-b border-gray-800 pb-2"><span>GNCAP Rating</span> <span className="text-white font-medium text-right">5 Star</span></li>
-              </ul>
             </div>
-          </div>
+          ) : (
+             <div className="text-center text-gray-400 py-12">Detailed specifications are currently being updated.</div>
+          )}
         </div>
       </section>
 
