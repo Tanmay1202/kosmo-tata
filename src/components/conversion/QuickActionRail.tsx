@@ -29,13 +29,6 @@ const actions: ActionItem[] = [
     color: "group-hover:text-emerald-400 group-hover:shadow-[0_0_15px_rgba(52,211,153,0.5)] group-hover:bg-emerald-400/20",
   },
   {
-    id: "finance",
-    label: "EMI Calculator",
-    iconPath: "/assets/images/icons/create-your-own.svg",
-    href: "/e-finance",
-    color: "group-hover:text-tata-blue group-hover:shadow-[0_0_15px_rgba(0,82,204,0.5)] group-hover:bg-tata-blue/20",
-  },
-  {
     id: "stock",
     label: "Showroom Stock",
     iconPath: "/assets/images/icons/find-dealer-icon.svg",

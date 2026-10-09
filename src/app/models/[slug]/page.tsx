@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ThreeViewer360 from "@/components/showroom/ThreeViewer360";
-import DynamicPricingWidget from "@/components/showroom/DynamicPricingWidget";
 import { useState, useEffect, use } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -302,11 +301,7 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
         </div>
       </section>
 
-      {/* Pricing section */}
-      <section id="price" className="bg-[#f5f5f5] max-w-4xl mx-auto px-4 py-24">
-        <h2 className="text-3xl font-bold text-center uppercase tracking-widest text-slate-900 mb-12">Finance Your {vehicle.name}</h2>
-        <DynamicPricingWidget vehiclePrice={vehicle.price} vehicleName={vehicle.name} />
-      </section>
+      
 
       {/* Fixed Bottom Action Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-[#333333] z-50">

@@ -7,7 +7,7 @@ import ThreeViewer360 from "./ThreeViewer360";
 import ColorVariantSelector, { ColorOption } from "./ColorVariantSelector";
 import { vehicles } from "@/data/vehicles";
 import ShowroomStockWidget from "@/components/conversion/ShowroomStockWidget";
-import DynamicPricingWidget from "./DynamicPricingWidget";
+
 
 const TATA_COLORS: ColorOption[] = [
   { id: "pristine-white", name: "Pristine White", hex: "#F4F4F4" },
@@ -41,16 +41,7 @@ export default function VehicleExplorer() {
     mileage: activeVehicle.engineSpecs.bootCapacity, // Repurposed for boot capacity
   };
 
-  // Convert "₹ 15.49 Lakh" to "1549000" for DynamicPricingWidget
-  const getPriceNumber = (priceStr: string) => {
-    const numMatch = priceStr.match(/[\d.]+/);
-    if (!numMatch) return "529990";
-    let num = parseFloat(numMatch[0]);
-    if (priceStr.toLowerCase().includes("lakh")) {
-      num *= 100000;
-    }
-    return num.toString();
-  };
+  
 
   return (
     <section id="showroom-360" className="relative w-full min-h-[90vh] bg-gray-50 py-24 overflow-hidden border-t border-gray-200">
@@ -147,11 +138,7 @@ export default function VehicleExplorer() {
           </Link>
         </div>
 
-        {/* Dynamic Pricing Slider / EMI Calculator */}
-        <DynamicPricingWidget 
-          vehiclePrice={getPriceNumber(activeVehicle.price)} 
-          vehicleName={activeVehicle.name} 
-        />
+        
         
       </div>
     </section>

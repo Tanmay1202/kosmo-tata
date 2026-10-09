@@ -133,7 +133,7 @@ export default function ContactForm({ preselectedModel = "" }: { preselectedMode
             <option value="">Select Enquiry Type</option>
             <option value="sales">New Car Sales</option>
             <option value="service">Service & Maintenance</option>
-            <option value="finance">Finance Options</option>
+            
             <option value="exchange">Exchange Value</option>
             <option value="other">Other</option>
           </select>

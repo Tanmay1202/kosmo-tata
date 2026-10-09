@@ -18,12 +18,6 @@ const hubItems = [
     actionType: "service",
   },
   {
-    id: "financing",
-    title: "Car Financing",
-    icon: Receipt,
-    actionType: "emi",
-  },
-  {
     id: "dealer",
     title: "Dealer Locator",
     icon: MapPin,
@@ -48,8 +42,6 @@ export default function DealershipConversionHub() {
                   router.push("/dealer-locator");
                 } else if (item.actionType === "service") {
                   router.push("/service/book-service");
-                } else if (item.actionType === "emi") {
-                  router.push("/e-finance");
                 } else {
                   openModal(item.actionType as any);
                 }
