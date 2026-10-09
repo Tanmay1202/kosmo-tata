@@ -15,23 +15,40 @@ export default function TestDriveForm({ preselectedModel = "" }: { preselectedMo
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
     
-    // Simulate API call to customercare@kosmotata.in
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        model: preselectedModel,
-        date: "",
-        time: "",
-        message: ""
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          type: 'test_drive',
+        }),
       });
-    }, 1500);
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          model: preselectedModel,
+          date: "",
+          time: "",
+          message: ""
+        });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -161,6 +178,10 @@ export default function TestDriveForm({ preselectedModel = "" }: { preselectedMo
       >
         {status === "submitting" ? "Submitting Request..." : "Confirm Test Drive Booking"}
       </button>
+      
+      {status === "error" && (
+        <p className="text-red-600 text-center text-sm font-medium">Failed to submit request. Please try again later.</p>
+      )}
       
       <p className="text-xs text-slate-500 text-center mt-4">
         By submitting this form, you agree to our Terms of Service and Privacy Policy.

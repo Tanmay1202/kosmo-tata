@@ -14,23 +14,40 @@ export default function ContactForm({ preselectedModel = "" }: { preselectedMode
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
     
-    // Simulate API call to customercare@kosmotata.in
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        city: "",
-        model: preselectedModel,
-        enquiryType: "",
-        message: ""
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          type: 'contact',
+        }),
       });
-    }, 1500);
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          city: "",
+          model: preselectedModel,
+          enquiryType: "",
+          message: ""
+        });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -160,6 +177,9 @@ export default function ContactForm({ preselectedModel = "" }: { preselectedMode
       >
         {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
+      {status === "error" && (
+        <p className="text-red-600 text-center text-sm font-medium">Failed to send message. Please try again later.</p>
+      )}
     </form>
   );
 }

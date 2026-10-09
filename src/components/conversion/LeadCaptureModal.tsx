@@ -16,23 +16,50 @@ export default function LeadCaptureModal() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [bookingId, setBookingId] = useState("");
 
+  const [isError, setIsError] = useState(false);
+
   // Sync tab with modalMode when opened
   useEffect(() => {
     if (isModalOpen) {
       setActiveTab(modalMode);
       setIsSuccess(false);
+      setIsError(false);
     }
   }, [isModalOpen, modalMode]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+    setIsError(false);
+    
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...data,
+          type: 'lead_capture',
+          leadType: activeTab
+        }),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setBookingId(`TML-${Math.random().toString(36).substr(2, 6).toUpperCase()}`);
+      } else {
+        setIsError(true);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setIsError(true);
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      setBookingId(`TML-${Math.random().toString(36).substr(2, 6).toUpperCase()}`);
-    }, 1500);
+    }
   };
 
   const selectedVehicleData = vehicles.find((v) => v.slug === preselectedVehicle) || vehicles[0];
@@ -152,7 +179,7 @@ export default function LeadCaptureModal() {
                       <>
                         <div className="space-y-1">
                           <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Select Model</label>
-                          <select className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors appearance-none" defaultValue={preselectedVehicle || ""}>
+                          <select name="model" className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors appearance-none" defaultValue={preselectedVehicle || ""}>
                             <option value="" disabled>Choose a vehicle...</option>
                             {vehicles.map(v => (
                               <option key={v.slug} value={v.slug}>{v.name} - {v.trim}</option>
@@ -165,14 +192,14 @@ export default function LeadCaptureModal() {
                             <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Preferred Date</label>
                             <div className="relative">
                               <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                              <input type="date" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors [color-scheme:dark]" />
+                              <input name="date" type="date" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors [color-scheme:dark]" />
                             </div>
                           </div>
                           <div className="space-y-1 relative">
                             <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Time Slot</label>
                             <div className="relative">
                               <Clock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                              <select required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors appearance-none">
+                              <select name="time" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors appearance-none">
                                 <option value="">Select time...</option>
                                 <option value="morning">Morning (9AM - 12PM)</option>
                                 <option value="afternoon">Afternoon (12PM - 4PM)</option>
@@ -186,7 +213,7 @@ export default function LeadCaptureModal() {
                           <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Doorstep Location (Pincode)</label>
                           <div className="relative">
                             <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                            <input type="text" placeholder="e.g. 400001" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
+                            <input name="pincode" type="text" placeholder="e.g. 400001" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
                           </div>
                         </div>
                       </>
@@ -195,28 +222,28 @@ export default function LeadCaptureModal() {
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-1">
                             <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Make / Brand</label>
-                            <input type="text" placeholder="e.g. Maruti Suzuki" required className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
+                            <input name="make" type="text" placeholder="e.g. Maruti Suzuki" required className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
                           </div>
                           <div className="space-y-1">
                             <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Model & Variant</label>
-                            <input type="text" placeholder="e.g. Swift VXI" required className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
+                            <input name="model" type="text" placeholder="e.g. Swift VXI" required className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
                           </div>
                         </div>
                         
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-1">
                             <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Year of Mfr</label>
-                            <input type="number" placeholder="2018" required min="2000" max="2025" className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
+                            <input name="year" type="number" placeholder="2018" required min="2000" max="2025" className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
                           </div>
                           <div className="space-y-1">
                             <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Odometer (KMs)</label>
-                            <input type="number" placeholder="45000" required className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
+                            <input name="odometer" type="number" placeholder="45000" required className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
                           </div>
                         </div>
 
                         <div className="space-y-1">
                           <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Condition</label>
-                          <select required className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors appearance-none">
+                          <select name="condition" required className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors appearance-none">
                             <option value="excellent">Excellent (Like new, no scratches)</option>
                             <option value="good">Good (Minor wear and tear)</option>
                             <option value="fair">Fair (Needs some repair)</option>
@@ -231,14 +258,14 @@ export default function LeadCaptureModal() {
                         <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Full Name</label>
                         <div className="relative">
                           <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                          <input type="text" placeholder="John Doe" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
+                          <input name="name" type="text" placeholder="John Doe" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
                         </div>
                       </div>
                       <div className="space-y-1 relative">
                         <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Mobile Number</label>
                         <div className="relative">
                           <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                          <input type="tel" placeholder="+91 99999 99999" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
+                          <input name="phone" type="tel" placeholder="+91 99999 99999" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors placeholder:text-slate-600" />
                         </div>
                       </div>
                     </div>
@@ -255,6 +282,9 @@ export default function LeadCaptureModal() {
                         activeTab === "test-drive" ? "Confirm Booking" : "Get Instant Valuation"
                       )}
                     </Button>
+                    {isError && (
+                      <p className="text-red-600 text-center text-xs mt-2 font-medium">Failed to submit request. Please try again.</p>
+                    )}
                   </form>
                 </>
               )}
