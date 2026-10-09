@@ -20,21 +20,21 @@ const slides: SlideData[] = [
     name: "A E R I S",
     tagline: "DEFEAT BORING",
     price: "5.29",
-    image: "/assets/images/cars/aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha",
+    image: "/assets/images/cars/aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif",
   },
   {
     id: "sierra",
     name: "S I E R R A",
     tagline: "Powered Tailgate with Gesture Control",
     price: "13.99",
-    image: "/assets/images/cars/sierrakv-14-1_$TT-614-400-D$_fit_crop_fmt_avif-alpha",
+    image: "/assets/images/cars/sierrakv-14-1_$TT-614-400-D$_fit_crop_fmt_avif-alpha.avif",
   },
   {
     id: "harrier",
     name: "H A R R I E R",
     tagline: "Above All.",
     price: "15.49",
-    image: "/assets/images/cars/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha",
+    image: "/assets/images/cars/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif",
   }
 ];
 

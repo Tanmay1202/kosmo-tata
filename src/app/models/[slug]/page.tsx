@@ -130,67 +130,64 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
       {/* Features Section */}
       <section id="features" className="py-24 max-w-7xl mx-auto px-4">
         <div className="space-y-32">
-          
-          {/* Performance */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h3 className="text-slate-500 font-bold tracking-widest uppercase mb-4 text-sm">Unmatched Performance</h3>
-              <h2 className="text-4xl font-bold uppercase tracking-widest mb-6 text-slate-900">Engineered to Thrill</h2>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                Powered by the {vehicle.engineSpecs?.engineOrBattery}, the {vehicle.name} delivers unparalleled torque and efficiency. It seamlessly adapts to your driving style and terrain.
-              </p>
-              <ul className="space-y-4 text-slate-700">
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-slate-900" />
-                  <span className="font-medium">{vehicle.engineSpecs?.power} Output</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-slate-900" />
-                  <span className="font-medium">{vehicle.engineSpecs?.groundClearance} Ground Clearance</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-slate-900" />
-                  <span className="font-medium">Advanced ESP with 14 Functions</span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative h-[400px] rounded-3xl overflow-hidden order-1 md:order-2 bg-slate-100 border border-gray-200 shadow-sm">
-              <Image 
-                src="/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg" 
-                alt="Terrain Response" 
-                fill 
-                className="object-cover" 
-              />
-            </div>
-          </div>
-
-          {/* Design */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] rounded-3xl overflow-hidden bg-slate-100 border border-gray-200 shadow-sm">
-              <Image 
-                src={vehicle.interiorShot || "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/safari-interior-lifestyle-resized-new.jpg"} 
-                alt="Premium Interior" 
-                fill 
-                className="object-cover" 
-              />
-            </div>
-            <div>
-              <h3 className="text-slate-500 font-bold tracking-widest uppercase mb-4 text-sm">Aero-Lux Design</h3>
-              <h2 className="text-4xl font-bold uppercase tracking-widest mb-6 text-slate-900">Crafted for the Senses</h2>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                Step inside to experience an uncompromisingly luxurious cabin. The {vehicle.name} features a state-of-the-art cinematic infotainment system that creates a private lounge experience on the go.
-              </p>
-              <ul className="space-y-4 text-slate-700">
-                {vehicle.features?.map((feature: string, idx: number) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-slate-900" />
-                    <span className="font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
+          {vehicle.exclusiveFeatures && vehicle.exclusiveFeatures.length > 0 ? (
+            vehicle.exclusiveFeatures.map((feature, idx) => (
+              <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className={feature.isReversed ? "order-2 md:order-2" : "order-2 md:order-1"}>
+                  <h3 className="text-slate-500 font-bold tracking-widest uppercase mb-4 text-sm">{feature.subtitle}</h3>
+                  <h2 className="text-4xl font-bold uppercase tracking-widest mb-6 text-slate-900">{feature.title}</h2>
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-4 text-slate-700">
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-slate-900" />
+                      <span className="font-medium">Exclusive to {vehicle.name}</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className={`relative h-[400px] rounded-3xl overflow-hidden ${feature.isReversed ? "order-1 md:order-1" : "order-1 md:order-2"} bg-slate-100 border border-gray-200 shadow-sm`}>
+                  <Image 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
+              </div>
+            ))
+          ) : (
+            <>
+              {/* Fallback to original static features if no exclusive features provided */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="order-2 md:order-1">
+                  <h3 className="text-slate-500 font-bold tracking-widest uppercase mb-4 text-sm">Unmatched Performance</h3>
+                  <h2 className="text-4xl font-bold uppercase tracking-widest mb-6 text-slate-900">Engineered to Thrill</h2>
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    Powered by the {vehicle.engineSpecs?.engineOrBattery}, the {vehicle.name} delivers unparalleled torque and efficiency. It seamlessly adapts to your driving style and terrain.
+                  </p>
+                  <ul className="space-y-4 text-slate-700">
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-slate-900" />
+                      <span className="font-medium">{vehicle.engineSpecs?.power} Output</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-slate-900" />
+                      <span className="font-medium">{vehicle.engineSpecs?.groundClearance} Ground Clearance</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="relative h-[400px] rounded-3xl overflow-hidden order-1 md:order-2 bg-slate-100 border border-gray-200 shadow-sm">
+                  <Image 
+                    src="/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg" 
+                    alt="Terrain Response" 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </section>
 
