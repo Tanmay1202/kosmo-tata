@@ -128,65 +128,65 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
       )}
 
       {/* Features Section */}
-      <section id="features" className="py-24 max-w-7xl mx-auto px-4">
-        <div className="space-y-32">
+      <section id="features" className="py-24 bg-white">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+          <div className="mb-16 text-center md:text-left">
+            <h3 className="text-tata-blue font-bold tracking-widest uppercase mb-4 text-sm flex items-center justify-center md:justify-start gap-2">
+              <span className="w-8 h-[2px] bg-tata-blue"></span>
+              Distinctive Characteristics
+            </h3>
+            <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-widest text-slate-900">
+              Uniquely {vehicle.name}
+            </h2>
+            <p className="mt-6 text-slate-600 max-w-2xl text-lg">
+              Every detail of the {vehicle.name} has been meticulously crafted to elevate your driving experience. Discover the signature features that set it apart.
+            </p>
+          </div>
+
           {vehicle.exclusiveFeatures && vehicle.exclusiveFeatures.length > 0 ? (
-            vehicle.exclusiveFeatures.map((feature, idx) => (
-              <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className={feature.isReversed ? "order-2 md:order-2" : "order-2 md:order-1"}>
-                  <h3 className="text-slate-500 font-bold tracking-widest uppercase mb-4 text-sm">{feature.subtitle}</h3>
-                  <h2 className="text-4xl font-bold uppercase tracking-widest mb-6 text-slate-900">{feature.title}</h2>
-                  <p className="text-slate-600 leading-relaxed mb-6">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-4 text-slate-700">
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-slate-900" />
-                      <span className="font-medium">Exclusive to {vehicle.name}</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className={`relative h-[400px] rounded-3xl overflow-hidden ${feature.isReversed ? "order-1 md:order-1" : "order-1 md:order-2"} bg-slate-100 border border-gray-200 shadow-sm`}>
-                  <Image 
-                    src={feature.image} 
-                    alt={feature.title} 
-                    fill 
-                    className="object-cover" 
-                  />
-                </div>
-              </div>
-            ))
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[350px]">
+              {vehicle.exclusiveFeatures.map((feature, idx) => {
+                // Determine styling based on index to create a bento box layout
+                const isLarge = idx === 0 || idx === 3;
+                const colSpan = isLarge ? "md:col-span-2" : "md:col-span-1";
+                const rowSpan = isLarge ? "md:row-span-2" : "md:row-span-1";
+                
+                return (
+                  <div 
+                    key={idx} 
+                    className={`group relative rounded-3xl overflow-hidden ${colSpan} ${rowSpan} bg-slate-100 border border-gray-200 shadow-sm`}
+                  >
+                    <Image 
+                      src={feature.image} 
+                      alt={feature.title} 
+                      fill 
+                      className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    
+                    {/* Content */}
+                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <h4 className="text-tata-blue font-bold tracking-widest uppercase text-xs mb-3 flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        {feature.subtitle}
+                      </h4>
+                      <h3 className={`font-display font-bold text-white uppercase tracking-wider mb-4 ${isLarge ? 'text-4xl' : 'text-2xl'}`}>
+                        {feature.title}
+                      </h3>
+                      <p className={`text-gray-300 leading-relaxed ${isLarge ? 'line-clamp-3 text-base' : 'line-clamp-2 text-sm'}`}>
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           ) : (
-            <>
-              {/* Fallback to original static features if no exclusive features provided */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="order-2 md:order-1">
-                  <h3 className="text-slate-500 font-bold tracking-widest uppercase mb-4 text-sm">Unmatched Performance</h3>
-                  <h2 className="text-4xl font-bold uppercase tracking-widest mb-6 text-slate-900">Engineered to Thrill</h2>
-                  <p className="text-slate-600 leading-relaxed mb-6">
-                    Powered by the {vehicle.engineSpecs?.engineOrBattery}, the {vehicle.name} delivers unparalleled torque and efficiency. It seamlessly adapts to your driving style and terrain.
-                  </p>
-                  <ul className="space-y-4 text-slate-700">
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-slate-900" />
-                      <span className="font-medium">{vehicle.engineSpecs?.power} Output</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-slate-900" />
-                      <span className="font-medium">{vehicle.engineSpecs?.groundClearance} Ground Clearance</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="relative h-[400px] rounded-3xl overflow-hidden order-1 md:order-2 bg-slate-100 border border-gray-200 shadow-sm">
-                  <Image 
-                    src="/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg" 
-                    alt="Terrain Response" 
-                    fill 
-                    className="object-cover" 
-                  />
-                </div>
-              </div>
-            </>
+            <div className="text-center text-slate-500 py-12 bg-slate-50 rounded-3xl border border-gray-200">
+              Detailed feature breakdown is currently being updated for this model.
+            </div>
           )}
         </div>
       </section>
