@@ -22,6 +22,7 @@ export default function MegaMenuNav() {
     { name: "About Kosmo Tata", href: "/about", hasDropdown: true },
     { name: "Models", href: "/models", hasDropdown: true },
     { name: "Offers", href: "/offers" },
+    { name: "Dealerships", href: "/dealer-locator" },
     { name: "Reviews", href: "/reviews" },
     { name: "Gallery", href: "/gallery" },
     { name: "Careers", href: "/careers" },
@@ -86,13 +87,6 @@ export default function MegaMenuNav() {
               </Link>
             ))}
             <div className="pt-8 flex flex-col gap-4">
-              <Link 
-                href="/dealer-locator"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="py-4 border border-white text-center font-bold tracking-widest uppercase hover:bg-white hover:text-slate-900 transition-colors"
-              >
-                Find a Dealer
-              </Link>
               <button 
                 onClick={() => { setIsMobileMenuOpen(false); openModal('test-drive'); }}
                 className="py-4 bg-white text-slate-900 text-center font-bold tracking-widest uppercase hover:bg-gray-100 transition-colors"
