@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useDealership } from "@/context/DealershipContext";
 import { Cloud, Wrench, Receipt, MapPin } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const hubItems = [
   {
@@ -21,7 +21,7 @@ const hubItems = [
     id: "financing",
     title: "Car Financing",
     icon: Receipt,
-    actionType: "financing",
+    actionType: "emi",
   },
   {
     id: "dealer",
@@ -33,6 +33,7 @@ const hubItems = [
 
 export default function DealershipConversionHub() {
   const { openModal } = useDealership();
+  const router = useRouter();
 
   return (
     <section className="w-full py-16 bg-white border-t border-gray-100">
@@ -43,7 +44,15 @@ export default function DealershipConversionHub() {
               key={item.id}
               className="flex flex-col items-start p-8 bg-[#f9f9f9] cursor-pointer hover:bg-gray-100 transition-colors h-[200px] justify-between"
               onClick={() => {
-                if (item.actionType === "test-drive") openModal("test-drive");
+                if (item.actionType === "dealer") {
+                  router.push("/dealer-locator");
+                } else if (item.actionType === "service") {
+                  router.push("/service/book-service");
+                } else if (item.actionType === "emi") {
+                  router.push("/e-finance");
+                } else {
+                  openModal(item.actionType as any);
+                }
               }}
             >
               <div className="text-[#1328E0]">
@@ -57,4 +66,3 @@ export default function DealershipConversionHub() {
     </section>
   );
 }
-
