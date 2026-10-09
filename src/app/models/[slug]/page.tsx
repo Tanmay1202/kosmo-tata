@@ -127,8 +127,8 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
         </section>
       )}
 
-      {/* Features Section */}
-      <section id="features" className="py-24 bg-white">
+            {/* Features Section */}
+      <section id="features" className="py-24 bg-slate-50 border-t border-gray-200">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="mb-16 text-center md:text-left">
             <h3 className="text-tata-blue font-bold tracking-widest uppercase mb-4 text-sm flex items-center justify-center md:justify-start gap-2">
@@ -139,52 +139,26 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
               Uniquely {vehicle.name}
             </h2>
             <p className="mt-6 text-slate-600 max-w-2xl text-lg">
-              Every detail of the {vehicle.name} has been meticulously crafted to elevate your driving experience. Discover the signature features that set it apart.
+              Explore the detailed attributes that define the {vehicle.name}. Every element has been engineered to deliver an unparalleled driving experience.
             </p>
           </div>
 
-          {vehicle.exclusiveFeatures && vehicle.exclusiveFeatures.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[350px]">
-              {vehicle.exclusiveFeatures.map((feature, idx) => {
-                // Determine styling based on index to create a bento box layout
-                const isLarge = idx === 0 || idx === 3;
-                const colSpan = isLarge ? "md:col-span-2" : "md:col-span-1";
-                const rowSpan = isLarge ? "md:row-span-2" : "md:row-span-1";
-                
-                return (
-                  <div 
-                    key={idx} 
-                    className={`group relative rounded-3xl overflow-hidden ${colSpan} ${rowSpan} bg-slate-100 border border-gray-200 shadow-sm`}
-                  >
-                    <Image 
-                      src={feature.image} 
-                      alt={feature.title} 
-                      fill 
-                      className="object-cover transition-transform duration-700 group-hover:scale-105" 
-                    />
-                    
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
-                    
-                    {/* Content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <h4 className="text-tata-blue font-bold tracking-widest uppercase text-xs mb-3 flex items-center gap-2">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        {feature.subtitle}
-                      </h4>
-                      <h3 className={`font-display font-bold text-white uppercase tracking-wider mb-4 ${isLarge ? 'text-4xl' : 'text-2xl'}`}>
-                        {feature.title}
-                      </h3>
-                      <p className={`text-gray-300 leading-relaxed ${isLarge ? 'line-clamp-3 text-base' : 'line-clamp-2 text-sm'}`}>
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+          {vehicle.textFeatures && vehicle.textFeatures.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+              {vehicle.textFeatures.map((feature, idx) => (
+                <div key={idx} className="relative pl-8 md:pl-0 border-l-2 border-tata-blue md:border-l-0 md:border-t-2 md:pt-8 group">
+                  <div className="absolute left-[-5px] top-0 md:top-[-5px] md:left-0 w-2 h-2 rounded-full bg-tata-blue group-hover:scale-150 transition-transform duration-300"></div>
+                  <h3 className="font-display font-bold text-slate-900 uppercase tracking-wider text-2xl mb-4 group-hover:text-tata-blue transition-colors duration-300">
+                    {feature.category}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed text-lg text-justify">
+                    {feature.details}
+                  </p>
+                </div>
+              ))}
             </div>
           ) : (
-            <div className="text-center text-slate-500 py-12 bg-slate-50 rounded-3xl border border-gray-200">
+            <div className="text-center text-slate-500 py-12 bg-white rounded-3xl border border-gray-200 shadow-sm">
               Detailed feature breakdown is currently being updated for this model.
             </div>
           )}
