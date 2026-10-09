@@ -1,0 +1,1 @@
+// Dealer types (Dealer, Location)

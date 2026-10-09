@@ -1,0 +1,615 @@
+Folder PATH listing for volume New Volume
+Volume serial number is D8A2-23E1
+D:\CAR-DEALER\PUBLIC\ASSETS
+|   index
+|   index.html
+|   
++---3d
+|   |   01c7999e0f949f81261d.wasm
+|   |   autoshop_01_2k.hdr
+|   |   basis_transcoder.wasm
+|   |   TIAGO_DAY_HDRI_V2.hdr
+|   |   TIAGO_STUDIO_HDR_4k_NEW_4.hdr
+|   |   
+|   \---models
+|           BOOT_MECH.bin
+|           CLUSTER.bin
+|           DAY_BG.bin
+|           final.bin
+|           HYDROLIC.bin
+|           MID_BASE_SEAT.bin
+|           SMART.bin
+|           tds_bg_1.bin
+|           
++---aeris
+|       ice.html
+|       ice.priceInfo.json_cityId_India-MH-MUMBAI
+|       
++---configurator
+|       process.html_modelId_5-2GIEXOQ3_pplId_5-2GIBHGIF
+|       
++---content
+|   \---dam
+|       \---tml
+|           +---corporate
+|           |   \---brand-assets
+|           |       \---fonts
+|           |           |   ParallelDisplay-Bold.otf
+|           |           |   ParallelDisplay-Medium.otf
+|           |           |   ParallelDisplay-Regular.otf
+|           |           |   Supreme-Light.ttf
+|           |           |   Supreme-Medium.ttf
+|           |           |   Supreme-Regular.ttf
+|           |           |   Supreme-Variable.ttf
+|           |           |   
+|           |           \---icomoon
+|           |                   icomoon.ttf_xxm2q6
+|           |                   
+|           \---pv
+|               \---general
+|                   |   gif_100x100.svg
+|                   |   tata-blue-small-logo.png
+|                   |   
+|                   +---digital-showroom
+|                   |   \---icons
+|                   |           test-drive-white.svg
+|                   |           
+|                   +---icons
+|                   |       Car%20-%20Preowned.svg
+|                   |       Car.svg
+|                   |       CO2.svg
+|                   |       create-your-own.svg
+|                   |       favicon.ico
+|                   |       fb.png
+|                   |       inst.png
+|                   |       Reserve.svg
+|                   |       tw.png
+|                   |       yt.png
+|                   |       
+|                   \---sticky-cta-icons
+|                           book-test-drive-icon.svg
+|                           download-brochure-icon-black.svg
+|                           download-brochure-icon.svg
+|                           find-dealer-icon-black.svg
+|                           find-dealer-icon.svg
+|                           
++---etc.clientlibs
+|   +---core
+|   |   \---wcm
+|   |       \---components
+|   |           \---commons
+|   |               \---site
+|   |                   \---clientlibs
+|   |                           container.js
+|   |                           
+|   +---tml-framework
+|   |   \---clientlibs
+|   |       |   clientlib-base-min.js
+|   |       |   clientlib-base.css
+|   |       |   clientlib-dependencies.css
+|   |       |   clientlib-dependencies.js
+|   |       |   clientlib-vendors.js
+|   |       |   
+|   |       \---clientlib-site
+|   |           \---resources
+|   |               \---fonts
+|   |                       fontawesome-webfont.woff2_v_4.7.0
+|   |                       
+|   \---tml-pv
+|       \---clientlibs
+|               clientlib-base.css
+|               
++---fonts
+|       ParallelDisplay-Bold.otf
+|       ParallelDisplay-Medium.otf
+|       ParallelDisplay-Regular.otf
+|       Supreme-Light.ttf
+|       Supreme-Medium.ttf
+|       Supreme-Regular.ttf
+|       Supreme-Variable.ttf
+|       
++---images
+|   +---cars
+|   |       accomplished-dandeli-drizzle_$R-292-164-D$_fit_crop_fmt_webp
+|   |       aeris-cooled-glovebox_$R-292-164-D$_fit_crop_fmt_webp
+|   |       aeris-dandeli-drizzle_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       aeris-dandeli-drizzle_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       aeris-dandeli-drizzle_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+|   |       aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_fit_fmt_avif-alpha
+|   |       aeris-i-petrol-banner-d_$BA-1920-925-T$_fit_fit_fmt_avif-alpha
+|   |       aeris-interior-petrol_$IMG-1326-721-D$_fit_crop_fmt_avif-alpha
+|   |       aeris-interior-petrol_$IMG-1326-721-T$_fit_crop_fmt_avif-alpha
+|   |       aeris-lifestyle-1_$VH-500-300-D$_fit_crop_fmt_avif-alpha
+|   |       aeris-lifestyle-2_$VH-728-300-D$_fit_crop_fmt_avif-alpha
+|   |       all-new-altroz-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       all-new-altroz-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       all-new-altroz-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       altroz-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+|   |       creative-nitro-crimson_$R-292-164-D$_fit_crop_fmt_webp
+|   |       creative-nitro-crimson_$R-292-164-T$_fit_crop_fmt_webp
+|   |       creative-plus-24-dehradun-dew_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       creative-plus-24-dehradun-dew_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       creative-plus-24-dehradun-dew_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       curvv-ev_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       curvv-ev_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       curvv-ev_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       curvv-new-pure-grey_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       curvv-new-pure-grey_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       curvv-new-pure-grey_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       d-curvv-banner-kv_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+|   |       find-dealership-aeris_$B-1228-488-D$_fit_fit_fmt_avif-alpha
+|   |       find-dealership-aeris_$B-1228-488-T$_fit_fit_fmt_avif-alpha
+|   |       harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+|   |       harrier-ev-nav_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       harrier-ev-nav_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       harrier-ev-nav_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       nexon-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+|   |       punch-ev-fearlessyellow-new_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       punch-ev-fearlessyellow-new_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       punch-ev-fearlessyellow-new_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       punch-mce-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       punch-mce-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       punch-mce-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       punch-new-revised-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+|   |       pure-grey-7_$R-292-164-D$_fit_crop_fmt_webp
+|   |       pure-plus-pure-grey_$R-292-164-D$_fit_crop_fmt_webp
+|   |       pure-plus-pure-grey_$R-292-164-T$_fit_crop_fmt_webp
+|   |       safari-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+|   |       safari-red-dark-home-navigation-new_$R-292-164-D$_fit_crop_fmt_webp
+|   |       safari-red-dark-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       safari-red-dark-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       safari-red-dark-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       sierra-horses_$B-1228-488-D$_fit_crop_fmt_avif-alpha
+|   |       sierra-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       sierra-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       sierra-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       sierrakv-14-1_$TT-614-400-D$_fit_crop_fmt_avif-alpha
+|   |       the-next-gen-tiago-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+|   |       the-next-gen-tiago-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+|   |       the-next-gen-tiago-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+|   |       tiago-new-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+|   |       TIAGO_DAY_HDRI_V2.hdr
+|   |       TIAGO_STUDIO_HDR_4k_NEW_4.hdr
+|   |       
+|   \---icons
+|           book-test-drive-icon.svg
+|           Car.svg
+|           CO2.svg
+|           create-your-own.svg
+|           download-brochure-icon-black.svg
+|           download-brochure-icon.svg
+|           find-dealer-icon-black.svg
+|           find-dealer-icon.svg
+|           Reserve.svg
+|           tata-blue-small-logo.png
+|           test-drive-white.svg
+|           
++---libs
+|   \---granite
+|       \---csrf
+|               token.json
+|               
++---organisation
+|       about-us.html
+|       our-history.html
+|       our-leadership.html
+|       
+\---_external
+    +---accounts.tatadigital.com
+    |   \---v2
+    |           tdl-sso-auth.js
+    |           
+    +---assets.adobedtm.com
+    |   \---dafdc05f0802
+    |       \---1585fe2fa01e
+    |               launch-b994bb440948.min.js
+    |               
+    +---d7ito9xmxyjfe.cloudfront.net
+    |   \---one3d
+    |       +---assets
+    |       |   \---tigor_pv_2026
+    |       |       |   final.bin
+    |       |       |   hotspot_atlas.png
+    |       |       |   modelCode.json
+    |       |       |   one3dfunction_config.js
+    |       |       |   player.json
+    |       |       |   
+    |       |       +---accessories
+    |       |       |   +---DAY_BG
+    |       |       |   |   |   DAY_BG.bin
+    |       |       |   |   |   DAY_BG.json
+    |       |       |   |   |   
+    |       |       |   |   \---textures
+    |       |       |   |           albedo40.jpg
+    |       |       |   |           alpha02e_one3dt.png
+    |       |       |   |           ao02e_one3dt.png
+    |       |       |   |           cmr02e_one3dt.png
+    |       |       |   |           emissive02e_one3dt.png
+    |       |       |   |           normal02e_one3dt.png
+    |       |       |   |           
+    |       |       |   +---infotainment_screen
+    |       |       |   |   |   CLUSTER.bin
+    |       |       |   |   |   CLUSTER.json
+    |       |       |   |   |   
+    |       |       |   |   \---textures
+    |       |       |   |           albedo20u_one3dt.png
+    |       |       |   |           alpha02e_one3dt.png
+    |       |       |   |           ao02e_one3dt.png
+    |       |       |   |           cmr02e_one3dt.png
+    |       |       |   |           emissive02e_one3dt.png
+    |       |       |   |           normal02e_one3dt.png
+    |       |       |   |           
+    |       |       |   +---varient
+    |       |       |   |   |   SMART.bin
+    |       |       |   |   |   SMART.json
+    |       |       |   |   |   
+    |       |       |   |   \---textures
+    |       |       |   |           albedo20u_one3dt.png
+    |       |       |   |           alpha20u_one3dt.png
+    |       |       |   |           ao40.jpg
+    |       |       |   |           cmr10e_one3dt.png
+    |       |       |   |           emissive02e_one3dt.png
+    |       |       |   |           normal20u_one3dt.png
+    |       |       |   |           
+    |       |       |   \---var_seat
+    |       |       |       |   MID_BASE_SEAT.bin
+    |       |       |       |   MID_BASE_SEAT.json
+    |       |       |       |   
+    |       |       |       \---textures
+    |       |       |               albedo10u_one3dt.png
+    |       |       |               alpha51u_one3dt.png
+    |       |       |               ao20.jpg
+    |       |       |               cmr51e_one3dt.png
+    |       |       |               emissive02e_one3dt.png
+    |       |       |               normal10u_one3dt.png
+    |       |       |               
+    |       |       +---animation
+    |       |       |       BOOT_MECH.bin
+    |       |       |       HYDROLIC.bin
+    |       |       |       tds_bg_1.bin
+    |       |       |       
+    |       |       +---environments
+    |       |       |       autoshop_01_2k.hdr
+    |       |       |       TIAGO_DAY_HDRI_V2.hdr
+    |       |       |       TIAGO_STUDIO_HDR_4k_NEW_4.hdr
+    |       |       |       
+    |       |       +---js
+    |       |       |       howler.min.js
+    |       |       |       
+    |       |       +---lib
+    |       |       |       01c7999e0f949f81261d.wasm
+    |       |       |       app.bundle.js
+    |       |       |       
+    |       |       \---textures
+    |       |               albedo20.jpg
+    |       |               alpha20u_one3dt.png
+    |       |               ao40.jpg
+    |       |               cmr10u_one3dt.png
+    |       |               emissive02e_one3dt.png
+    |       |               normal20u_one3dt.png
+    |       |               
+    |       +---img
+    |       |       Loader-gif-mobile.gif
+    |       |       Loader-gif-web.gif
+    |       |       
+    |       +---js
+    |       |       One3DModel.js
+    |       |       
+    |       \---ktx2
+    |               basis_transcoder.js
+    |               basis_transcoder.wasm
+    |               
+    +---fonts.gstatic.com
+    |   \---s
+    |       \---roboto
+    |           \---v48
+    |                   KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2
+    |                   
+    +---i.ytimg.com
+    |   \---vi
+    |       \---4PO7yUMQ9v8
+    |               default.jpg
+    |               maxresdefault.jpg
+    |               
+    +---s7ap1.scene7.com
+    |   \---is
+    |       \---image
+    |           \---tatamotors
+    |                   1-2-l-powerful-revotron-engine_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   170mm-ground-clearance_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   1945-1_$TT-614-400-S$_fit_fit_fmt_avif-alpha
+    |                   2-tweeters-new_$IMG-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   2-tweeters_$R-292-164-D$_fit_crop_fmt_webp
+    |                   26-03cm-floating-infotainment-touchscreen_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   360-svs-2_$IMG-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   360-svs-hd-camera-with-multiple%203d-2d-views_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   4-speakers-2-weeters_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   5-cluster-based-audio-with-bluetooth-1_$R-292-164-D$_fit_crop_fmt_webp
+    |                   5-cluster-based-audio-with-bluetooth-1_$R-292-164-T$_fit_crop_fmt_webp
+    |                   5-cluster-based-audio-with-bluetooth_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   6-airbags-10_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   about-banner_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   accomplished-dandeli-drizzle_$R-292-164-D$_fit_crop_fmt_webp
+    |                   aeris-cooled-glovebox_$R-292-164-D$_fit_crop_fmt_webp
+    |                   aeris-dandeli-drizzle_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   aeris-dandeli-drizzle_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   aeris-dandeli-drizzle_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_fit_fmt_avif-alpha
+    |                   aeris-i-petrol-banner-d_$BA-1920-925-T$_fit_fit_fmt_avif-alpha
+    |                   aeris-interior-petrol_$IMG-1326-721-D$_fit_crop_fmt_avif-alpha
+    |                   aeris-interior-petrol_$IMG-1326-721-T$_fit_crop_fmt_avif-alpha
+    |                   aeris-lifestyle-1_$VH-500-300-D$_fit_crop_fmt_avif-alpha
+    |                   aeris-lifestyle-2_$VH-728-300-D$_fit_crop_fmt_avif-alpha
+    |                   ai-noor_$OL-460-360-S$_fit_crop_fmt_jpg
+    |                   all-new-altroz-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   all-new-altroz-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   all-new-altroz-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   altroz-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   andamanadventure-2_$R-292-164-D$_fit_crop_fmt_webp
+    |                   android-auto-and-apple-carplay-with-wireless-connectivity_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   auto-fold-orvms-1_$R-292-164-D$_fit_crop_fmt_webp
+    |                   auto-headlamps-and-rain-sensing-wipers-3_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   auto-headlamps-and-rain-sensing-wipers-4_$R-292-164-D$_fit_crop_fmt_webp
+    |                   chrome-door-handles_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   connected-vehicle-technology-with-ira-1_$IMG-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   connected-vehicle-technology-with-ira_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   corp-governance_$TT-614-420-S$_fit_crop_fmt_avif-alpha
+    |                   creative-nitro-crimson_$R-292-164-D$_fit_crop_fmt_webp
+    |                   creative-nitro-crimson_$R-292-164-T$_fit_crop_fmt_webp
+    |                   creative-plus-24-dehradun-dew_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   creative-plus-24-dehradun-dew_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   creative-plus-24-dehradun-dew_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   cruise-control-14_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   cruise-control-key-feature_$R-292-164-D$_fit_crop_fmt_webp
+    |                   curvv-ev_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   curvv-ev_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   curvv-ev_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   curvv-new-pure-grey_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   curvv-new-pure-grey_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   curvv-new-pure-grey_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   customer-experience_$R-292-164-D$_fit_crop_fmt_webp
+    |                   d-curvv-banner-kv_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   dandeli-drizzle-new_$VH-708-500-D$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-0_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-10_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-11_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-12_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-13_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-14_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-15_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-16_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-17_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-18_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-19_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-1_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-20_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-21_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-22_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-23_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-24_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-26_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-27_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-28_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-29_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-2_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-30_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-31_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-32_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-33_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-34_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-35_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-3_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-4_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-5_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-6_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-7_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-8_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   DandeliDrizzle-9_$PO-1228-468-S$_fit_crop_fmt_avif-alpha
+    |                   digital-video-recording-dvr_$IMG-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   duneglow_$R-292-164-D$_fit_crop_fmt_webp
+    |                   electronic-stability-program-esp-1_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   electronic-stability-program-esp-2_$R-292-164-D$_fit_crop_fmt_webp
+    |                   exterior-petrol_$IMG-1326-721-D$_fit_crop_fmt_avif-alpha
+    |                   exterior-petrol_$IMG-1326-721-T$_fit_crop_fmt_avif-alpha
+    |                   find-dealership-aeris_$B-1228-488-D$_fit_fit_fmt_avif-alpha
+    |                   find-dealership-aeris_$B-1228-488-T$_fit_fit_fmt_avif-alpha
+    |                   follow-me-home-headlamps-3_$IMG-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   front-arm-rest-1_$IMG-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   front-armrest-1_$R-292-164-D$_fit_crop_fmt_webp
+    |                   front-armrest-1_$R-292-164-T$_fit_crop_fmt_webp
+    |                   fully-automatic-temperature-control-6_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   fully-automatic-temperature-control-7_$R-292-164-D$_fit_crop_fmt_webp
+    |                   fully-automatic-temperature-control-7_$R-292-164-T$_fit_crop_fmt_webp
+    |                   grasslandbeigedt_$R-292-164-D$_fit_crop_fmt_webp
+    |                   harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   harrier-ev-nav_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   harrier-ev-nav_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   harrier-ev-nav_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   hd-rverse-parking-camera_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   hd-tvi-reverse-parking-camera_$IMG-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   height-adjustable-driver-seat-11_$R-292-164-D$_fit_crop_fmt_webp
+    |                   hill-hold-assist-1_$R-292-164-D$_fit_crop_fmt_webp
+    |                   hill-hold-assist_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   home-page-cyantific_$R-292-164-D$_fit_crop_fmt_webp
+    |                   irvm_$R-292-164-D$_fit_crop_fmt_webp
+    |                   isofix-12_$IMG-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   itpms-4_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   led-connected-taillamps-petrol_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   led-fog-lamps-petrol_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   magazine-pockets_$R-292-164-D$_fit_crop_fmt_webp
+    |                   milestone-1_$TT-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   moving-india-forward_$TT-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   mr-bharat-puri_$OL-460-360-S$_fit_crop_fmt_jpg
+    |                   mr-bharat-puri_$TT-500-420-D$_fit_crop_fmt_jpg
+    |                   natrajan_$OL-460-360-S$_fit_crop_fmt_jpg
+    |                   navigation-2_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   navigation-2_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   navigation-2_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   nexon-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   nitro-crimson-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   nitro-crimson-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   nitro-crimson-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   NitroCrimson_$R-292-164-D$_fit_crop_fmt_webp
+    |                   one-shot-down-driver-side-window_$R-292-164-D$_fit_crop_fmt_webp
+    |                   our-history-banner_$BA-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   our-leadership-banner_$BA-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   oxide_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   oxide_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   oxide_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   pb-balaji_$IMG-1080-1080-S$_fit_fit_fmt_jpg
+    |                   pb-balaji_$OL-460-360-S$_fit_crop_fmt_jpg
+    |                   pc-slider_$TT-614-420-S$_fit_fit_fmt_avif-alpha
+    |                   people-first_$TT-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   people_$R-292-164-D$_fit_crop_fmt_webp
+    |                   petrol-bootspace_$IMG-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   premium-aerolux-ventilated-leatherette-seats_$IMG-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   premium-openview-dashboard_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   premium-ventilated-leatherette-seats-1_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   publications_$R-292-164-D$_fit_crop_fmt_webp
+    |                   punch-ev-fearlessyellow-new_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   punch-ev-fearlessyellow-new_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   punch-ev-fearlessyellow-new_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   punch-mce-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   punch-mce-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   punch-mce-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   punch-new-revised-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   pure-grey-7_$R-292-164-D$_fit_crop_fmt_webp
+    |                   pure-plus-pure-grey_$R-292-164-D$_fit_crop_fmt_webp
+    |                   pure-plus-pure-grey_$R-292-164-T$_fit_crop_fmt_webp
+    |                   push-button-start-new_$IMG-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   quick-response-paddle-shifters-in-amt_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   r15-diamond-aero-alloy-wheels_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   r15-diamond-alloy-wheels_$IMG-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   rear-ac-vents-3_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   rear-center-armrest-with-cupholder_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   rear-defogger-9_$R-292-164-D$_fit_crop_fmt_webp
+    |                   RishikeshRapid-teaser_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   RishikeshRapid-teaser_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   RishikeshRapid-teaser_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   safari-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   safari-red-dark-home-navigation-new_$R-292-164-D$_fit_crop_fmt_webp
+    |                   safari-red-dark-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   safari-red-dark-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   safari-red-dark-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   segment-best-419l-bootspace_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   shailesh-chandra_$OL-460-360-S$_fit_crop_fmt_jpg
+    |                   shailesh-chandra_$TT-500-420-D$_fit_crop_fmt_jpg
+    |                   shaping-the-world_$TT-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   sharkfin-antenna-with-gps_$R-292-164-D$_fit_crop_fmt_webp
+    |                   sierra-horses_$B-1228-488-D$_fit_crop_fmt_avif-alpha
+    |                   sierra-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   sierra-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   sierra-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   sierrakv-14-1_$TT-614-400-D$_fit_crop_fmt_avif-alpha
+    |                   signature-led-head-lamps-and-drls_$IMG-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   signature-led-headlamps-drls_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   smart-pristine-white_$R-292-164-D$_fit_crop_fmt_webp
+    |                   smart-pristine-white_$R-292-164-T$_fit_crop_fmt_webp
+    |                   sudha-krishnan_$OL-460-360-S$_fit_crop_fmt_jpg
+    |                   sudha-krishnan_$TT-500-420-D$_fit_crop_fmt_jpg
+    |                   sustainability_$R-292-164-D$_fit_crop_fmt_webp
+    |                   TATA%20CARS%20logo_White_$CB-100-70-D$_fit_fit_fmt_avif-alpha
+    |                   TATA%20logo_White_$HL-50-33-D$_fit_fit_fmt_avif-alpha
+    |                   tata-group_$R-292-164-D$_fit_crop_fmt_webp
+    |                   Tata_Sons_Logo_48_32_$F-48-32-S$_fit_crop_fmt_webp-alpha
+    |                   the-next-gen-tiago-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha
+    |                   the-next-gen-tiago-navigation_$HC-264-129-M$_fit_fit_fmt_avif-alpha
+    |                   the-next-gen-tiago-navigation_$HC-264-129-T$_fit_fit_fmt_avif-alpha
+    |                   thumb-culture_$R-292-164-D$_fit_crop_fmt_webp
+    |                   tiago-new-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha
+    |                   ultraview-360-dg-camera-with-digital-video-recorder-dvr_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   usha-sangwan_$OL-460-360-S$_fit_crop_fmt_jpg
+    |                   usha-sangwan_$TT-500-420-D$_fit_crop_fmt_avif-alpha
+    |                   vedika_$OL-460-360-S$_fit_crop_fmt_jpg
+    |                   vehicle-portfolio_$R-292-164-D$_fit_crop_fmt_webp
+    |                   vibrance-varanasi-nav_$R-292-164-D$_fit_crop_fmt_webp
+    |                   window-winding-toggle-switch-new_$IMG-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   wireless-charger-17_$IMG-614-400-S$_fit_crop_fmt_avif-alpha
+    |                   wireless-charger-18_$IMG-474-248-D$_fit_crop_fmt_avif-alpha
+    |                   zipfast-65w-rear-c-type-usb-charger_$IMG-1920-925-S$_fit_crop_fmt_avif-alpha
+    |                   
+    +---unpkg.com
+    |   \---user-experior-web@0.3.28
+    |       \---bundle
+    |               ue-web-bundle.js
+    |               
+    +---www.google.com
+    |   +---js
+    |   |   \---th
+    |   |           bVQdRn6VMJ5C2nDVMLUwESAoLSPdZL_PNP5jTAKPN7E.js
+    |   |           YFvwi5sh66-0LD_HtnYTexlD_10VXfWvlE_sha1ie8A.js
+    |   |           
+    |   \---recaptcha
+    |       |   enterprise.js_render_6LfJzrIrAAAAADo2JYnfvzgzPStN2pIWbQxEacLf
+    |       |   
+    |       \---enterprise
+    |               webworker.js_hl_en_v_guXhH0v-XMxlzmbTwqkaT4i5
+    |               
+    +---www.gstatic.com
+    |   \---recaptcha
+    |       +---api2
+    |       |       logo_48.png
+    |       |       
+    |       \---releases
+    |           \---guXhH0v-XMxlzmbTwqkaT4i5
+    |                   recaptcha__en.js
+    |                   styles__ltr.css
+    |                   
+    +---www.youtube.com
+    |   |   iframe_api
+    |   |   
+    |   +---embed
+    |   |       4PO7yUMQ9v8_controls_1_autoplay_0_loop_1_mute_0_playlist_4PO7yUMQ9v8_rel_0_enablejsapi_1
+    |   |       
+    |   \---s
+    |       +---player
+    |       |   \---f2999a12
+    |       |       |   www-player.css
+    |       |       |   
+    |       |       +---player_embed_es6.vflset
+    |       |       |   \---en_US
+    |       |       |           base.js
+    |       |       |           
+    |       |       \---www-widgetapi.vflset
+    |       |               www-widgetapi.js
+    |       |               
+    |       \---_
+    |           \---ytembeds
+    |               \---_
+    |                   +---js
+    |                   |   \---k=ytembeds.base.en_US.KnLLmnw14PA.2021.O
+    |                   |       +---am=AAAAAAAAAEA
+    |                   |       |   \---d=1
+    |                   |       |       \---excm=base,root
+    |                   |       |           \---br=1
+    |                   |       |               \---rs=AGKMywGkcYHpyxPU3O2lM3HnzPGkFB1cpQ
+    |                   |       |                       m=root,base
+    |                   |       |                       
+    |                   |       \---ck=ytembeds.base.UsaYRPhg50s.L.F4.O
+    |                   |           \---am=AAAAAAAAAEA
+    |                   |               \---d=1
+    |                   |                   +---exm=base,cwx9N,root
+    |                   |                   |   \---excm=base,root
+    |                   |                   |       \---ed=1
+    |                   |                   |           \---br=1
+    |                   |                   \---exm=base,root
+    |                   |                       \---excm=base,root
+    |                   |                           \---ed=1
+    |                   |                               \---br=1
+    |                   |                                   \---rs=AGKMywFyPRHEtAW4YnaEOMNMRTJmUYBg0Q
+    |                   |                                           m=cwx9N
+    |                   |                                           
+    |                   \---ss
+    |                       \---k=ytembeds.base.UsaYRPhg50s.L.F4.O
+    |                           \---am=AAAAAAAAAEA
+    |                               \---d=1
+    |                                   \---br=1
+    |                                       \---rs=AGKMywH4arCkxf4APF-x0g6vPu10KqXuXg
+    |                                               m=root,base
+    |                                               
+    \---yt3.ggpht.com
+            G-V0HSJDdL0OoVgm_cHxqlc1oCZwHqNzdZTlV0eDfma-iuX1kS_zKmyNrL3dxs7A04EcJr-D9g=s68-c-k-c0x00ffffff-no-rj
+            

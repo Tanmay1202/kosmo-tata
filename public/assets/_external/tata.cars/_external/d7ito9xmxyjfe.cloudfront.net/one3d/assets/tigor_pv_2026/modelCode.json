@@ -1,0 +1,1584 @@
+{
+  "oem": "TATA",
+  "model": {
+    "tigor_pv_2026": "tigor_pv_2026",
+    "Aeris": "tigor_pv_2026"
+  },
+  "variants": {
+    "54920125ALER": {
+      "name": "54920125ALER",
+      "3dName": "ACMP_MT",
+      "tata": {
+        "displayName": "ACCOMPLISHED"
+      }
+    },
+    "54920125AT7R": {
+      "name": "54920125AT7R",
+      "3dName": "ACMP_MT",
+      "tata": {
+        "displayName": "ACCOMPLISHED"
+      }
+    },
+    "54920125AT9R": {
+      "name": "54920125AT9R",
+      "3dName": "ACMP_MT",
+      "tata": {
+        "displayName": "ACCOMPLISHED"
+      }
+    },
+    "54920125AT8R": {
+      "name": "54920125AT8R",
+      "3dName": "ACMP_MT",
+      "tata": {
+        "displayName": "ACCOMPLISHED"
+      }
+    },
+    "54920125AMOR": {
+      "name": "54920125AMOR",
+      "3dName": "ACMP_MT",
+      "tata": {
+        "displayName": "ACCOMPLISHED"
+      }
+    },
+    "54920125AT6R": {
+      "name": "54920125AT6R",
+      "3dName": "ACMP_MT",
+      "tata": {
+        "displayName": "ACCOMPLISHED"
+      }
+    },
+    "54920825ALER": {
+      "name": "54920825ALER",
+      "3dName": "ACMP_AMT",
+      "tata": {
+        "displayName": "ACCOMPLISHED AMT",
+        "showroom": true
+      }
+    },
+    "54920825AT7R": {
+      "name": "54920825AT7R",
+      "3dName": "ACMP_AMT",
+      "default": true,
+      "tata": {
+        "displayName": "ACCOMPLISHED AMT",
+        "showroom": true
+      }
+    },
+    "54920825AT9R": {
+      "name": "54920825AT9R",
+      "3dName": "ACMP_AMT",
+      "tata": {
+        "displayName": "ACCOMPLISHED AMT",
+        "showroom": true
+      }
+    },
+    "54920825AT8R": {
+      "name": "54920825AT8R",
+      "3dName": "ACMP_AMT",
+      "tata": {
+        "displayName": "ACCOMPLISHED AMT",
+        "showroom": true
+      }
+    },
+    "54920825AMOR": {
+      "name": "54920825AMOR",
+      "3dName": "ACMP_AMT",
+      "tata": {
+        "displayName": "ACCOMPLISHED AMT",
+        "showroom": true
+      }
+    },
+    "54920825AT6R": {
+      "name": "54920825AT6R",
+      "3dName": "ACMP_AMT",
+      "tata": {
+        "displayName": "ACCOMPLISHED AMT",
+        "showroom": true
+      }
+    },
+    "54921325ALER": {
+      "name": "54921325ALER",
+      "3dName": "ACMP_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG"
+      }
+    },
+    "54921325AT7R": {
+      "name": "54921325AT7R",
+      "3dName": "ACMP_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG"
+      }
+    },
+    "54921325AT9R": {
+      "name": "54921325AT9R",
+      "3dName": "ACMP_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG"
+      }
+    },
+    "54921325AT8R": {
+      "name": "54921325AT8R",
+      "3dName": "ACMP_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG"
+      }
+    },
+    "54921325AMOR": {
+      "name": "54921325AMOR",
+      "3dName": "ACMP_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG"
+      }
+    },
+    "54921325AT6R": {
+      "name": "54921325AT6R",
+      "3dName": "ACMP_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG"
+      }
+    },
+    "54920225ALER": {
+      "name": "54920225ALER",
+      "3dName": "ACMP_AMT_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG AMT"
+      }
+    },
+    "54920225AT7R": {
+      "name": "54920225AT7R",
+      "3dName": "ACMP_AMT_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG AMT"
+      }
+    },
+    "54920225AT9R": {
+      "name": "54920225AT9R",
+      "3dName": "ACMP_AMT_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG AMT"
+      }
+    },
+    "54920225AT8R": {
+      "name": "54920225AT8R",
+      "3dName": "ACMP_AMT_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG AMT"
+      }
+    },
+    "54920225AMOR": {
+      "name": "54920225AMOR",
+      "3dName": "ACMP_AMT_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG AMT"
+      }
+    },
+    "54920225AT6R": {
+      "name": "54920225AT6R",
+      "3dName": "ACMP_AMT_CNG",
+      "tata": {
+        "displayName": "ACCOMPLISHED CNG AMT"
+      }
+    },
+    "54920625AIJR": {
+      "name": "54920625AIJR",
+      "3dName": "CREATV_MT",
+      "tata": {
+        "displayName": "CREATIVE"
+      }
+    },
+    "54920625ASRR": {
+      "name": "54920625ASRR",
+      "3dName": "CREATV_MT",
+      "tata": {
+        "displayName": "CREATIVE"
+      }
+    },
+    "54920625AA0R": {
+      "name": "54920625AA0R",
+      "3dName": "CREATV_MT",
+      "tata": {
+        "displayName": "CREATIVE"
+      }
+    },
+    "54920625AQER": {
+      "name": "54920625AQER",
+      "3dName": "CREATV_MT",
+      "tata": {
+        "displayName": "CREATIVE"
+      }
+    },
+    "54920625AL3R": {
+      "name": "54920625AL3R",
+      "3dName": "CREATV_MT",
+      "tata": {
+        "displayName": "CREATIVE"
+      }
+    },
+    "54920625ANZR": {
+      "name": "54920625ANZR",
+      "3dName": "CREATV_MT",
+      "tata": {
+        "displayName": "CREATIVE"
+      }
+    },
+    "54920725ANZR": {
+      "name": "54920725ANZR",
+      "3dName": "CREATV_AMT",
+      "tata": {
+        "displayName": "CREATIVE AMT"
+      }
+    },
+    "54920725AIJR": {
+      "name": "54920725AIJR",
+      "3dName": "CREATV_AMT",
+      "tata": {
+        "displayName": "CREATIVE AMT"
+      }
+    },
+    "54920725AQER": {
+      "name": "54920725AQER",
+      "3dName": "CREATV_AMT",
+      "tata": {
+        "displayName": "CREATIVE AMT"
+      }
+    },
+    "54920725ASRR": {
+      "name": "54920725ASRR",
+      "3dName": "CREATV_AMT",
+      "tata": {
+        "displayName": "CREATIVE AMT"
+      }
+    },
+    "54920725AA0R": {
+      "name": "54920725AA0R",
+      "3dName": "CREATV_AMT",
+      "tata": {
+        "displayName": "CREATIVE AMT"
+      }
+    },
+    "54920725AL3R": {
+      "name": "54920725AL3R",
+      "3dName": "CREATV_AMT",
+      "tata": {
+        "displayName": "CREATIVE AMT"
+      }
+    },
+    "54921125AQER": {
+      "name": "54921125AQER",
+      "3dName": "CREATV_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG"
+      }
+    },
+    "54921125AA0R": {
+      "name": "54921125AA0R",
+      "3dName": "CREATV_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG"
+      }
+    },
+    "54921125ASRR": {
+      "name": "54921125ASRR",
+      "3dName": "CREATV_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG"
+      }
+    },
+    "54921125AL3R": {
+      "name": "54921125AL3R",
+      "3dName": "CREATV_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG"
+      }
+    },
+    "54921125ANZR": {
+      "name": "54921125ANZR",
+      "3dName": "CREATV_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG"
+      }
+    },
+    "54921125AIJR": {
+      "name": "54921125AIJR",
+      "3dName": "CREATV_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG"
+      }
+    },
+    "54921225ASRR": {
+      "name": "54921225ASRR",
+      "3dName": "CREATV_AMT_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG AMT"
+      }
+    },
+    "54921225AQER": {
+      "name": "54921225AQER",
+      "3dName": "CREATV_AMT_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG AMT"
+      }
+    },
+    "54921225AIJR": {
+      "name": "54921225AIJR",
+      "3dName": "CREATV_AMT_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG AMT"
+      }
+    },
+    "54921225AL3R": {
+      "name": "54921225AL3R",
+      "3dName": "CREATV_AMT_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG AMT"
+      }
+    },
+    "54921225ANZR": {
+      "name": "54921225ANZR",
+      "3dName": "CREATV_AMT_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG AMT"
+      }
+    },
+    "54921225AA0R": {
+      "name": "54921225AA0R",
+      "3dName": "CREATV_AMT_CNG",
+      "tata": {
+        "displayName": "CREATIVE CNG AMT"
+      }
+    },
+    "54920425AA0R": {
+      "name": "54920425AA0R",
+      "3dName": "PURE_PLUS_MT",
+      "tata": {
+        "displayName": "PURE+"
+      }
+    },
+    "54920425AL3R": {
+      "name": "54920425AL3R",
+      "3dName": "PURE_PLUS_MT",
+      "tata": {
+        "displayName": "PURE+"
+      }
+    },
+    "54920425AIJR": {
+      "name": "54920425AIJR",
+      "3dName": "PURE_PLUS_MT",
+      "tata": {
+        "displayName": "PURE+"
+      }
+    },
+    "54920425ANZR": {
+      "name": "54920425ANZR",
+      "3dName": "PURE_PLUS_MT",
+      "tata": {
+        "displayName": "PURE+"
+      }
+    },
+    "54920425ASRR": {
+      "name": "54920425ASRR",
+      "3dName": "PURE_PLUS_MT",
+      "tata": {
+        "displayName": "PURE+"
+      }
+    },
+    "54920425AQER": {
+      "name": "54920425AQER",
+      "3dName": "PURE_PLUS_MT",
+      "tata": {
+        "displayName": "PURE+"
+      }
+    },
+    "54920525AIJR": {
+      "name": "54920525AIJR",
+      "3dName": "PURE_PLUS_AMT",
+      "tata": {
+        "displayName": "PURE+ AMT"
+      }
+    },
+    "54920525ANZR": {
+      "name": "54920525ANZR",
+      "3dName": "PURE_PLUS_AMT",
+      "tata": {
+        "displayName": "PURE+ AMT"
+      }
+    },
+    "54920525AA0R": {
+      "name": "54920525AA0R",
+      "3dName": "PURE_PLUS_AMT",
+      "tata": {
+        "displayName": "PURE+ AMT"
+      }
+    },
+    "54920525AQER": {
+      "name": "54920525AQER",
+      "3dName": "PURE_PLUS_AMT",
+      "tata": {
+        "displayName": "PURE+ AMT"
+      }
+    },
+    "54920525ASRR": {
+      "name": "54920525ASRR",
+      "3dName": "PURE_PLUS_AMT",
+      "tata": {
+        "displayName": "PURE+ AMT"
+      }
+    },
+    "54920525AL3R": {
+      "name": "54920525AL3R",
+      "3dName": "PURE_PLUS_AMT",
+      "tata": {
+        "displayName": "PURE+ AMT"
+      }
+    },
+    "54920925AL3R": {
+      "name": "54920925AL3R",
+      "3dName": "PURE_PLUS_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG"
+      }
+    },
+    "54920925AA0R": {
+      "name": "54920925AA0R",
+      "3dName": "PURE_PLUS_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG"
+      }
+    },
+    "54920925AIJR": {
+      "name": "54920925AIJR",
+      "3dName": "PURE_PLUS_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG"
+      }
+    },
+    "54920925ASRR": {
+      "name": "54920925ASRR",
+      "3dName": "PURE_PLUS_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG"
+      }
+    },
+    "54920925ANZR": {
+      "name": "54920925ANZR",
+      "3dName": "PURE_PLUS_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG"
+      }
+    },
+    "54920925AQER": {
+      "name": "54920925AQER",
+      "3dName": "PURE_PLUS_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG"
+      }
+    },
+    "54921025AA0R": {
+      "name": "54921025AA0R",
+      "3dName": "PURE_PLUS_AMT_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG AMT"
+      }
+    },
+    "54921025AIJR": {
+      "name": "54921025AIJR",
+      "3dName": "PURE_PLUS_AMT_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG AMT"
+      }
+    },
+    "54921025AL3R": {
+      "name": "54921025AL3R",
+      "3dName": "PURE_PLUS_AMT_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG AMT"
+      }
+    },
+    "54921025ANZR": {
+      "name": "54921025ANZR",
+      "3dName": "PURE_PLUS_AMT_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG AMT"
+      }
+    },
+    "54921025AQER": {
+      "name": "54921025AQER",
+      "3dName": "PURE_PLUS_AMT_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG AMT"
+      }
+    },
+    "54921025ASRR": {
+      "name": "54921025ASRR",
+      "3dName": "PURE_PLUS_AMT_CNG",
+      "tata": {
+        "displayName": "PURE+ CNG AMT"
+      }
+    },
+    "54923525ASRR": {
+      "name": "54923525ASRR",
+      "3dName": "PURE_MT",
+      "tata": {
+        "displayName": "PURE"
+      }
+    },
+    "54923525AA0R": {
+      "name": "54923525AA0R",
+      "3dName": "PURE_MT",
+      "tata": {
+        "displayName": "PURE"
+      }
+    },
+    "54923525ANZR": {
+      "name": "54923525ANZR",
+      "3dName": "PURE_MT",
+      "tata": {
+        "displayName": "PURE"
+      }
+    },
+    "54923525AQER": {
+      "name": "54923525AQER",
+      "3dName": "PURE_MT",
+      "tata": {
+        "displayName": "PURE"
+      }
+    },
+    "54923525AIJR": {
+      "name": "54923525AIJR",
+      "3dName": "PURE_MT",
+      "tata": {
+        "displayName": "PURE"
+      }
+    },
+    "54923525AL3R": {
+      "name": "54923525AL3R",
+      "3dName": "PURE_MT",
+      "tata": {
+        "displayName": "PURE"
+      }
+    },
+    "54923625AL3R": {
+      "name": "54923625AL3R",
+      "3dName": "PURE_AMT",
+      "tata": {
+        "displayName": "PURE AMT"
+      }
+    },
+    "54923625AQER": {
+      "name": "54923625AQER",
+      "3dName": "PURE_AMT",
+      "tata": {
+        "displayName": "PURE AMT"
+      }
+    },
+    "54923625ASRR": {
+      "name": "54923625ASRR",
+      "3dName": "PURE_AMT",
+      "tata": {
+        "displayName": "PURE AMT"
+      }
+    },
+    "54923625ANZR": {
+      "name": "54923625ANZR",
+      "3dName": "PURE_AMT",
+      "tata": {
+        "displayName": "PURE AMT"
+      }
+    },
+    "54923625AA0R": {
+      "name": "54923625AA0R",
+      "3dName": "PURE_AMT",
+      "tata": {
+        "displayName": "PURE AMT"
+      }
+    },
+    "54923625AIJR": {
+      "name": "54923625AIJR",
+      "3dName": "PURE_AMT",
+      "tata": {
+        "displayName": "PURE AMT"
+      }
+    },
+    "54923725AA0R": {
+      "name": "54923725AA0R",
+      "3dName": "PURE_CNG",
+      "tata": {
+        "displayName": "PURE CNG"
+      }
+    },
+    "54923725ANZR": {
+      "name": "54923725ANZR",
+      "3dName": "PURE_CNG",
+      "tata": {
+        "displayName": "PURE CNG"
+      }
+    },
+    "54923725AQER": {
+      "name": "54923725AQER",
+      "3dName": "PURE_CNG",
+      "tata": {
+        "displayName": "PURE CNG"
+      }
+    },
+    "54923725AL3R": {
+      "name": "54923725AL3R",
+      "3dName": "PURE_CNG",
+      "tata": {
+        "displayName": "PURE CNG"
+      }
+    },
+    "54923725AIJR": {
+      "name": "54923725AIJR",
+      "3dName": "PURE_CNG",
+      "tata": {
+        "displayName": "PURE CNG"
+      }
+    },
+    "54923725ASRR": {
+      "name": "54923725ASRR",
+      "3dName": "PURE_CNG",
+      "tata": {
+        "displayName": "PURE CNG"
+      }
+    },
+    "54923825AA0R": {
+      "name": "54923825AA0R",
+      "3dName": "PURE_AMT_CNG",
+      "tata": {
+        "displayName": "PURE CNG AMT"
+      }
+    },
+    "54923825AL3R": {
+      "name": "54923825AL3R",
+      "3dName": "PURE_AMT_CNG",
+      "tata": {
+        "displayName": "PURE CNG AMT"
+      }
+    },
+    "54923825ANZR": {
+      "name": "54923825ANZR",
+      "3dName": "PURE_AMT_CNG",
+      "tata": {
+        "displayName": "PURE CNG AMT"
+      }
+    },
+    "54923825AQER": {
+      "name": "54923825AQER",
+      "3dName": "PURE_AMT_CNG",
+      "tata": {
+        "displayName": "PURE CNG AMT"
+      }
+    },
+    "54923825ASRR": {
+      "name": "54923825ASRR",
+      "3dName": "PURE_AMT_CNG",
+      "tata": {
+        "displayName": "PURE CNG AMT"
+      }
+    },
+    "54923825AIJR": {
+      "name": "54923825AIJR",
+      "3dName": "PURE_AMT_CNG",
+      "tata": {
+        "displayName": "PURE CNG AMT"
+      }
+    },
+    "54920325AIJR": {
+      "name": "54920325AIJR",
+      "3dName": "SMART",
+      "tata": {
+        "displayName": "SMART"
+      }
+    },
+    "54920325ANZR": {
+      "name": "54920325ANZR",
+      "3dName": "SMART",
+      "tata": {
+        "displayName": "SMART"
+      }
+    },
+    "54920325AL3R": {
+      "name": "54920325AL3R",
+      "3dName": "SMART",
+      "tata": {
+        "displayName": "SMART"
+      }
+    },
+    "54921425AL3R": {
+      "name": "54921425AL3R",
+      "3dName": "SMART_CNG",
+      "tata": {
+        "displayName": "SMART CNG"
+      }
+    },
+    "54921425ANZR": {
+      "name": "54921425ANZR",
+      "3dName": "SMART_CNG",
+      "tata": {
+        "displayName": "SMART CNG"
+      }
+    },
+    "54921425AIJR": {
+      "name": "54921425AIJR",
+      "3dName": "SMART_CNG",
+      "tata": {
+        "displayName": "SMART CNG"
+      }
+    }
+  },
+  "color": {
+    "54920125ALER": {
+      "name": "54920125ALER",
+      "3dName": "PRISTINE_WHITE_BLACK_ROOF",
+      "variant": [
+        "ACMP_MT"
+      ]
+    },
+    "54920125AT7R": {
+      "name": "54920125AT7R",
+      "3dName": "DANDELI_DRIZZLE_BLACK_ROOF",
+      "variant": [
+        "ACMP_MT"
+      ]
+    },
+    "54920125AT9R": {
+      "name": "54920125AT9R",
+      "3dName": "BIKANER_BEIGE_BLACK_ROOF",
+      "variant": [
+        "ACMP_MT"
+      ]
+    },
+    "54920125AT8R": {
+      "name": "54920125AT8R",
+      "3dName": "NITRO_CRIMSON_BLACK_ROOF",
+      "variant": [
+        "ACMP_MT"
+      ]
+    },
+    "54920125AMOR": {
+      "name": "54920125AMOR",
+      "3dName": "MATHERAN_MONSOON_BLACK_ROOF",
+      "variant": [
+        "ACMP_MT"
+      ]
+    },
+    "54920125AT6R": {
+      "name": "54920125AT6R",
+      "3dName": "PURE_GREY_BLACK_ROOF",
+      "variant": [
+        "ACMP_MT"
+      ]
+    },
+    "54920825ALER": {
+      "name": "54920825ALER",
+      "3dName": "PRISTINE_WHITE_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT"
+      ]
+    },
+    "54920825AT7R": {
+      "name": "54920825AT7R",
+      "3dName": "DANDELI_DRIZZLE_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT"
+      ]
+    },
+    "54920825AT9R": {
+      "name": "54920825AT9R",
+      "3dName": "BIKANER_BEIGE_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT"
+      ]
+    },
+    "54920825AT8R": {
+      "name": "54920825AT8R",
+      "3dName": "NITRO_CRIMSON_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT"
+      ]
+    },
+    "54920825AMOR": {
+      "name": "54920825AMOR",
+      "3dName": "MATHERAN_MONSOON_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT"
+      ]
+    },
+    "54920825AT6R": {
+      "name": "54920825AT6R",
+      "3dName": "PURE_GREY_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT"
+      ]
+    },
+    "54921325ALER": {
+      "name": "54921325ALER",
+      "3dName": "PRISTINE_WHITE_BLACK_ROOF",
+      "variant": [
+        "ACMP_CNG"
+      ]
+    },
+    "54921325AT7R": {
+      "name": "54921325AT7R",
+      "3dName": "DANDELI_DRIZZLE_BLACK_ROOF",
+      "variant": [
+        "ACMP_CNG"
+      ]
+    },
+    "54921325AT9R": {
+      "name": "54921325AT9R",
+      "3dName": "BIKANER_BEIGE_BLACK_ROOF",
+      "variant": [
+        "ACMP_CNG"
+      ]
+    },
+    "54921325AT8R": {
+      "name": "54921325AT8R",
+      "3dName": "NITRO_CRIMSON_BLACK_ROOF",
+      "variant": [
+        "ACMP_CNG"
+      ]
+    },
+    "54921325AMOR": {
+      "name": "54921325AMOR",
+      "3dName": "MATHERAN_MONSOON_BLACK_ROOF",
+      "variant": [
+        "ACMP_CNG"
+      ]
+    },
+    "54921325AT6R": {
+      "name": "54921325AT6R",
+      "3dName": "PURE_GREY_BLACK_ROOF",
+      "variant": [
+        "ACMP_CNG"
+      ]
+    },
+    "54920225ALER": {
+      "name": "54920225ALER",
+      "3dName": "PRISTINE_WHITE_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT_CNG"
+      ]
+    },
+    "54920225AT7R": {
+      "name": "54920225AT7R",
+      "3dName": "DANDELI_DRIZZLE_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT_CNG"
+      ]
+    },
+    "54920225AT9R": {
+      "name": "54920225AT9R",
+      "3dName": "BIKANER_BEIGE_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT_CNG"
+      ]
+    },
+    "54920225AT8R": {
+      "name": "54920225AT8R",
+      "3dName": "NITRO_CRIMSON_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT_CNG"
+      ]
+    },
+    "54920225AMOR": {
+      "name": "54920225AMOR",
+      "3dName": "MATHERAN_MONSOON_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT_CNG"
+      ]
+    },
+    "54920225AT6R": {
+      "name": "54920225AT6R",
+      "3dName": "PURE_GREY_BLACK_ROOF",
+      "variant": [
+        "ACMP_AMT_CNG"
+      ]
+    },
+    "54920625AIJR": {
+      "name": "54920625AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "CREATV_MT"
+      ]
+    },
+    "54920625ASRR": {
+      "name": "54920625ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "CREATV_MT"
+      ]
+    },
+    "54920625AA0R": {
+      "name": "54920625AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "CREATV_MT"
+      ]
+    },
+    "54920625AQER": {
+      "name": "54920625AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "CREATV_MT"
+      ]
+    },
+    "54920625AL3R": {
+      "name": "54920625AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "CREATV_MT"
+      ]
+    },
+    "54920625ANZR": {
+      "name": "54920625ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "CREATV_MT"
+      ]
+    },
+    "54920725ANZR": {
+      "name": "54920725ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "CREATV_AMT"
+      ]
+    },
+    "54920725AIJR": {
+      "name": "54920725AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "CREATV_AMT"
+      ]
+    },
+    "54920725AQER": {
+      "name": "54920725AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "CREATV_AMT"
+      ]
+    },
+    "54920725ASRR": {
+      "name": "54920725ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "CREATV_AMT"
+      ]
+    },
+    "54920725AA0R": {
+      "name": "54920725AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "CREATV_AMT"
+      ]
+    },
+    "54920725AL3R": {
+      "name": "54920725AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "CREATV_AMT"
+      ]
+    },
+    "54921125AQER": {
+      "name": "54921125AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "CREATV_CNG"
+      ]
+    },
+    "54921125AA0R": {
+      "name": "54921125AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "CREATV_CNG"
+      ]
+    },
+    "54921125ASRR": {
+      "name": "54921125ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "CREATV_CNG"
+      ]
+    },
+    "54921125AL3R": {
+      "name": "54921125AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "CREATV_CNG"
+      ]
+    },
+    "54921125ANZR": {
+      "name": "54921125ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "CREATV_CNG"
+      ]
+    },
+    "54921125AIJR": {
+      "name": "54921125AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "CREATV_CNG"
+      ]
+    },
+    "54921225ASRR": {
+      "name": "54921225ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "CREATV_AMT_CNG"
+      ]
+    },
+    "54921225AQER": {
+      "name": "54921225AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "CREATV_AMT_CNG"
+      ]
+    },
+    "54921225AIJR": {
+      "name": "54921225AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "CREATV_AMT_CNG"
+      ]
+    },
+    "54921225AL3R": {
+      "name": "54921225AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "CREATV_AMT_CNG"
+      ]
+    },
+    "54921225ANZR": {
+      "name": "54921225ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "CREATV_AMT_CNG"
+      ]
+    },
+    "54921225AA0R": {
+      "name": "54921225AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "CREATV_AMT_CNG"
+      ]
+    },
+    "54920425AA0R": {
+      "name": "54920425AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "PURE_PLUS_MT"
+      ]
+    },
+    "54920425AL3R": {
+      "name": "54920425AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "PURE_PLUS_MT"
+      ]
+    },
+    "54920425AIJR": {
+      "name": "54920425AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "PURE_PLUS_MT"
+      ]
+    },
+    "54920425ANZR": {
+      "name": "54920425ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "PURE_PLUS_MT"
+      ]
+    },
+    "54920425ASRR": {
+      "name": "54920425ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "PURE_PLUS_MT"
+      ]
+    },
+    "54920425AQER": {
+      "name": "54920425AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "PURE_PLUS_MT"
+      ]
+    },
+    "54920525AIJR": {
+      "name": "54920525AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "PURE_PLUS_AMT"
+      ]
+    },
+    "54920525ANZR": {
+      "name": "54920525ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "PURE_PLUS_AMT"
+      ]
+    },
+    "54920525AA0R": {
+      "name": "54920525AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "PURE_PLUS_AMT"
+      ]
+    },
+    "54920525AQER": {
+      "name": "54920525AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "PURE_PLUS_AMT"
+      ]
+    },
+    "54920525ASRR": {
+      "name": "54920525ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "PURE_PLUS_AMT"
+      ]
+    },
+    "54920525AL3R": {
+      "name": "54920525AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "PURE_PLUS_AMT"
+      ]
+    },
+    "54920925AL3R": {
+      "name": "54920925AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "PURE_PLUS_CNG"
+      ]
+    },
+    "54920925AA0R": {
+      "name": "54920925AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "PURE_PLUS_CNG"
+      ]
+    },
+    "54920925AIJR": {
+      "name": "54920925AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "PURE_PLUS_CNG"
+      ]
+    },
+    "54920925ASRR": {
+      "name": "54920925ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "PURE_PLUS_CNG"
+      ]
+    },
+    "54920925ANZR": {
+      "name": "54920925ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "PURE_PLUS_CNG"
+      ]
+    },
+    "54920925AQER": {
+      "name": "54920925AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "PURE_PLUS_CNG"
+      ]
+    },
+    "54921025AA0R": {
+      "name": "54921025AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "PURE_PLUS_AMT_CNG"
+      ]
+    },
+    "54921025AIJR": {
+      "name": "54921025AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "PURE_PLUS_AMT_CNG"
+      ]
+    },
+    "54921025AL3R": {
+      "name": "54921025AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "PURE_PLUS_AMT_CNG"
+      ]
+    },
+    "54921025ANZR": {
+      "name": "54921025ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "PURE_PLUS_AMT_CNG"
+      ]
+    },
+    "54921025AQER": {
+      "name": "54921025AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "PURE_PLUS_AMT_CNG"
+      ]
+    },
+    "54921025ASRR": {
+      "name": "54921025ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "PURE_PLUS_AMT_CNG"
+      ]
+    },
+    "54923525ASRR": {
+      "name": "54923525ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "PURE_MT"
+      ]
+    },
+    "54923525AA0R": {
+      "name": "54923525AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "PURE_MT"
+      ]
+    },
+    "54923525ANZR": {
+      "name": "54923525ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "PURE_MT"
+      ]
+    },
+    "54923525AQER": {
+      "name": "54923525AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "PURE_MT"
+      ]
+    },
+    "54923525AIJR": {
+      "name": "54923525AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "PURE_MT"
+      ]
+    },
+    "54923525AL3R": {
+      "name": "54923525AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "PURE_MT"
+      ]
+    },
+    "54923625AL3R": {
+      "name": "54923625AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "PURE_AMT"
+      ]
+    },
+    "54923625AQER": {
+      "name": "54923625AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "PURE_AMT"
+      ]
+    },
+    "54923625ASRR": {
+      "name": "54923625ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "PURE_AMT"
+      ]
+    },
+    "54923625ANZR": {
+      "name": "54923625ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "PURE_AMT"
+      ]
+    },
+    "54923625AA0R": {
+      "name": "54923625AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "PURE_AMT"
+      ]
+    },
+    "54923625AIJR": {
+      "name": "54923625AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "PURE_AMT"
+      ]
+    },
+    "54923725AA0R": {
+      "name": "54923725AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "PURE_CNG"
+      ]
+    },
+    "54923725ANZR": {
+      "name": "54923725ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "PURE_CNG"
+      ]
+    },
+    "54923725AQER": {
+      "name": "54923725AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "PURE_CNG"
+      ]
+    },
+    "54923725AL3R": {
+      "name": "54923725AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "PURE_CNG"
+      ]
+    },
+    "54923725AIJR": {
+      "name": "54923725AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "PURE_CNG"
+      ]
+    },
+    "54923725ASRR": {
+      "name": "54923725ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "PURE_CNG"
+      ]
+    },
+    "54923825AA0R": {
+      "name": "54923825AA0R",
+      "3dName": "BIKANER_BEIGE",
+      "variant": [
+        "PURE_AMT_CNG"
+      ]
+    },
+    "54923825AL3R": {
+      "name": "54923825AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "PURE_AMT_CNG"
+      ]
+    },
+    "54923825ANZR": {
+      "name": "54923825ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "PURE_AMT_CNG"
+      ]
+    },
+    "54923825AQER": {
+      "name": "54923825AQER",
+      "3dName": "NITRO_CRIMSON",
+      "variant": [
+        "PURE_AMT_CNG"
+      ]
+    },
+    "54923825ASRR": {
+      "name": "54923825ASRR",
+      "3dName": "DANDELI_DRIZZLE",
+      "variant": [
+        "PURE_AMT_CNG"
+      ]
+    },
+    "54923825AIJR": {
+      "name": "54923825AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "PURE_AMT_CNG"
+      ]
+    },
+    "54920325AIJR": {
+      "name": "54920325AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "SMART"
+      ]
+    },
+    "54920325ANZR": {
+      "name": "54920325ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "SMART"
+      ]
+    },
+    "54920325AL3R": {
+      "name": "54920325AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "SMART"
+      ]
+    },
+    "54921425AL3R": {
+      "name": "54921425AL3R",
+      "3dName": "MATHERAN_MONSOON",
+      "variant": [
+        "SMART_CNG"
+      ]
+    },
+    "54921425ANZR": {
+      "name": "54921425ANZR",
+      "3dName": "PURE_GREY",
+      "variant": [
+        "SMART_CNG"
+      ]
+    },
+    "54921425AIJR": {
+      "name": "54921425AIJR",
+      "3dName": "PRISTINE_WHITE",
+      "variant": [
+        "SMART_CNG"
+      ]
+    }
+  },
+  "Accessories": {},
+  "data": {
+    "featureTable": {
+      "TOUCHSCREEN_INFOTAINMENT": {
+        "state": "3D",
+        "target": "FEAT_TOUCHSCREEN_INFOTAINMENT",
+        "category": "interior"
+      },
+      "FRONT_SEAT_WITH_VENTILATION": {
+        "state": "3D",
+        "target": "SEAT_VENTILATION",
+        "category": "interior"
+      },
+      "R15_ALLOY_WHEELS": {
+        "state": "3D",
+        "target": "FEAT_R15_ALLOY_WHEELS",
+        "category": "exterior"
+      },
+      "trailerMode": {
+        "state": "3D",
+        "target": "TRAILER_MODE",
+        "hotspot": false
+      },
+      "360_DEGREE_SVS": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "WIRELESS_APPLE_CARPLAY_ANDROID_AUTO": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "FULLY_AUTOMATIC_TEMPERATURE_CONTROL": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "ITPMS": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "CRUISE_CONTROL": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "COOLED_GLOVE_BOX": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "DAY_NIGHT_IRVM": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "6_SPEAKERS_TWEETERS": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "WIRELESS_CHARGER": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "FRONT_ARM_REST": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "HEIGHT_ADJUSTABLE_DRIVER_SEAT": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "REAR_AC_VENTS": {
+        "state": "2D",
+        "category": "interior"
+      },
+      "FRONT_FOG_LAMPS": {
+        "state": "2D",
+        "category": "exterior"
+      },
+      "NEW_LED_HEAD_LAMPS_AND_DRLS": {
+        "state": "2D",
+        "category": "exterior"
+      },
+      "NEW_COLOURS": {
+        "state": "2D",
+        "category": "exterior"
+      },
+      "LED_CONNECTED_TAIL_LAPMS": {
+        "state": "2D",
+        "category": "exterior"
+      },
+      "REAR_DEFOGGER": {
+        "state": "2D",
+        "category": "exterior"
+      },
+      "DVR": {
+        "state": "2D",
+        "category": "interior"
+      }
+    }
+  },
+  "Microinteraction": {
+    "DOORS": {
+      "animated": {
+        "0": {
+          "AnimateArray": [
+            "doorFrontRight",
+            "doorFrontLeft",
+            "doorRearLeft",
+            "doorRearRight",
+            "doorBoot"
+          ],
+          "sounds": {
+            "play": {
+              "onStart": [],
+              "onComplete": [],
+              "delay": 0
+            },
+            "reverse": {
+              "onStart": [],
+              "onComplete": [],
+              "delay": 0
+            }
+          }
+        }
+      },
+      "timeline": {},
+      "externalGLB": {}
+    }
+  },
+  "Background_Env": {
+    "STUDIO_BG": {
+      "bg": [],
+      "env": "STUDIO_BG"
+    },
+    "DAY_BG": {
+      "bg": [
+        "DAY_BG"
+      ],
+      "env": "DAY_BG"
+    }
+  }
+}

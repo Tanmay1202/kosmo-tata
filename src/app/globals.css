@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-obsidian: #0B0F17;
+  --color-obsidian-light: #161C28;
+  --color-tata-blue: #2334f5;
+  
+  /* Metallic Accents */
+  --color-metallic: #94a3b8;
+  --color-metallic-light: #cbd5e1;
+  --color-metallic-dark: #64748b;
+
+  /* Fonts mapped from next/font variables in layout.tsx */
+  --font-display: var(--font-parallel-display), serif;
+  --font-supreme: var(--font-supreme), sans-serif;
+}
+
+/* Base layer overrides */
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-supreme;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wide;
+  }
+}
+
+
+html { scroll-behavior: smooth; }
+
+
