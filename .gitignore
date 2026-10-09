@@ -44,3 +44,14 @@ next-env.d.ts
 public/newest_scrap.zip
 public/newest_scrap/
 public/latest.scrap/
+
+# fluff and references
+ui-reference/
+artifacts/
+*.mp4
+*.js
+!postcss.config.js
+*.txt
+!robots.txt
+
+public/scrap-review/
