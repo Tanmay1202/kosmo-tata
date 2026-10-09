@@ -7,7 +7,7 @@ export default function OffersPage() {
       title: "Festive Bonanza",
       description: "Get benefits up to ₹1,50,000 on select Tata SUVs. Includes free insurance and exchange bonus.",
       validity: "Valid till 31st Oct",
-      image: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/safari-interior-lifestyle-resized-new.jpg", // placeholder
+      image: "/assets/images/lifestyle/safari-interior-lifestyle-resized-new.jpg", // placeholder
       models: ["Safari", "Harrier"]
     },
     {

@@ -38,7 +38,7 @@ export interface Vehicle {
   category: VehicleCategory;
   price: string;
   availability: string;
-  image: string; // Navigation thumbnail
+  image: string; // High-resolution vehicle image
   slug: string;
   isNew?: boolean;
   
@@ -63,7 +63,7 @@ export const vehicles: Vehicle[] = [
     category: 'EVs',
     price: '₹ 15.49 Lakh',
     availability: 'Pre-book Now • Priority Delivery',
-    image: '/assets/images/cars/aeris-dandeli-drizzle_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'aeris',
     isNew: true,
     detailedSpecs: {
@@ -81,7 +81,7 @@ export const vehicles: Vehicle[] = [
     },
     features: ['360 SVS Camera', 'Ventilated Seats', 'iRA Connected Tech', 'JBL Audio'],
     exclusiveFeatures: [
-    { title: "Aerodynamic Excellence", subtitle: "Designed to Defeat Boring", description: "The Aeris features an ultra-low drag coefficient for maximum electric range, combined with flush door handles and aero-optimized wheels for a truly futuristic aesthetic.", image: '/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg', isReversed: false },
+    { title: "Aerodynamic Excellence", subtitle: "Designed to Defeat Boring", description: "The Aeris features an ultra-low drag coefficient for maximum electric range, combined with flush door handles and aero-optimized wheels for a truly futuristic aesthetic.", image: '/assets/images/lifestyle/terrain-repsonse.jpg', isReversed: false },
     { title: "Smart Ambient Lounge", subtitle: "Your Private Sanctuary", description: "Step into an intelligent cabin that adapts to your mood. Featuring biometric climate control, a 12.3-inch cinematic display, and a continuous glowing light-bar spanning the dashboard.", image: "/assets/images/cars/aeris-interior-ai.jpg", isReversed: true },
     { title: "Ultra-Fast Charging", subtitle: "Ready in Minutes", description: "Experience next-generation high-speed charging. The futuristic electric architecture ensures your SUV is powered up and ready to go with glowing ambient charging indicators.", image: "/assets/images/cars/futuristic_electric_suv_charging.jpg", isReversed: false }
   ],
@@ -118,7 +118,7 @@ export const vehicles: Vehicle[] = [
     category: 'SUVs',
     price: '₹ 14.99 Lakh',
     availability: 'In Showroom • Express 48h Delivery',
-    image: '/assets/images/cars/sierra-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/sierra-horses_$B-1228-488-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'sierra',
     isNew: true,
     detailedSpecs: {
@@ -136,8 +136,8 @@ export const vehicles: Vehicle[] = [
     },
     features: ['Panoramic Sunroof', 'Level 2 ADAS', 'Harman Audio', 'Ventilated Seats'],
     exclusiveFeatures: [
-    { title: "Lounge Seating", subtitle: "First-Class Travel", description: "The Sierra reinvents the SUV interior with executive lounge seating, a massive panoramic glass roof, and gesture-controlled amenities that make every journey feel like first class.", image: '/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg', isReversed: false },
-    { title: "Powered Tailgate", subtitle: "Smart Convenience", description: "Access your cargo space effortlessly with the gesture-controlled powered tailgate. The Sierra makes loading and unloading simple, even when your hands are full.", image: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/safari-interior-lifestyle-resized-new.jpg", isReversed: true },
+    { title: "Lounge Seating", subtitle: "First-Class Travel", description: "The Sierra reinvents the SUV interior with executive lounge seating, a massive panoramic glass roof, and gesture-controlled amenities that make every journey feel like first class.", image: '/assets/images/lifestyle/terrain-repsonse.jpg', isReversed: false },
+    { title: "Powered Tailgate", subtitle: "Smart Convenience", description: "Access your cargo space effortlessly with the gesture-controlled powered tailgate. The Sierra makes loading and unloading simple, even when your hands are full.", image: "/assets/images/lifestyle/safari-interior-lifestyle-resized-new.jpg", isReversed: true },
     { title: "Panoramic Starry Roof", subtitle: "A View of the Stars", description: "Experience an expansive luxury panoramic glass sunroof revealing a brilliant starry night sky above premium white leather seats with warm ambient lighting.", image: "/assets/images/cars/luxury_suv_panoramic_sunroof_stars.jpg", isReversed: false }
   ],
     textFeatures: [
@@ -162,7 +162,7 @@ export const vehicles: Vehicle[] = [
       { name: 'Oberon Black', hex: '#111111', rotationArray: [], hasDayNight: true },
       { name: 'Daytona Grey', hex: '#5A5A5A', rotationArray: ["/assets/360-viewer/DaytonaGrey/DaytonaGrey-0-18_$PO-750-500-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-0-22_$PO-750-500-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-0-23_$PO-750-500-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-0-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-1-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-2-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-3-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-4-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-5-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-6-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-7-26_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-8-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-9-26_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-10-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-11-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-12-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-13-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-14-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-15-26_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-16-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-17-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-18-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-19-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-20-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-21-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-22-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-23-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-24-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-25-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-26-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-27-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-28-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-29-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-30-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-31-26_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif","/assets/360-viewer/DaytonaGrey/DaytonaGrey-32-25_$PO-1228-468-S$_fit_crop_fmt_avif-alpha.avif"] }
     ],
-    exteriorBanner: '/assets/images/cars/sierrakv-14-1_$TT-614-400-D$_fit_crop_fmt_avif-alpha.avif',
+    exteriorBanner: '/assets/images/cars/sierra-horses_$B-1228-488-D$_fit_crop_fmt_avif-alpha.avif',
     interiorShot: '/assets/images/cars/premium-openview-dashboard_$IMG-474-248-D$_fit_crop_fmt_avif-alpha.avif',
     rotationArray: [],
   },
@@ -173,7 +173,7 @@ export const vehicles: Vehicle[] = [
     category: 'SUVs',
     price: '₹ 15.49 Lakh',
     availability: 'In Showroom',
-    image: '/assets/images/cars/harrier-ev-nav_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'harrier',
     detailedSpecs: {
     engine: { displacement: '2.0L Kryotec', maxPower: '170 PS', maxTorque: '350 Nm', cylinders: '4', transmission: '6-Speed AT', driveModes: 'Eco, City, Sport, Wet, Rough' },
@@ -191,7 +191,7 @@ export const vehicles: Vehicle[] = [
     features: ['ADAS Level 2', 'Smart E-Shifter', '360 Camera', 'JBL Sound'],
     exclusiveFeatures: [
     { title: "Kryotec Performance", subtitle: "Engineered to Thrill", description: "The powerful 170PS Kryotec diesel engine combined with Terrain Response Modes ensures the Harrier dominates both highways and harsh off-road terrains with ease.", image: "/assets/images/cars/harrier-offroad-ai.jpg", isReversed: false },
-    { title: "JBL Acoustic Experience", subtitle: "Concert on Wheels", description: "Immerse yourself in crystal-clear audio with the 10-speaker JBL sound system, tuned specifically for the Harrier's cabin acoustics.", image: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg", isReversed: true }
+    { title: "JBL Acoustic Experience", subtitle: "Concert on Wheels", description: "Immerse yourself in crystal-clear audio with the 10-speaker JBL sound system, tuned specifically for the Harrier's cabin acoustics.", image: "/assets/images/lifestyle/terrain-repsonse.jpg", isReversed: true }
   ],
     textFeatures: [
       {
@@ -226,7 +226,7 @@ export const vehicles: Vehicle[] = [
     category: 'SUVs',
     price: '₹ 16.19 Lakh',
     availability: 'In Showroom • Express 48h Delivery',
-    image: '/assets/images/cars/safari-red-dark-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/safari-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'safari',
     detailedSpecs: {
     engine: { displacement: '2.0L Kryotec', maxPower: '170 PS', maxTorque: '350 Nm', cylinders: '4', transmission: '6-Speed AT', driveModes: 'Eco, City, Sport, Terrain' },
@@ -243,8 +243,8 @@ export const vehicles: Vehicle[] = [
     },
     features: ['Boss Mode', 'Ventilated 2nd Row', 'Air Purifier', 'JBL Audio'],
     exclusiveFeatures: [
-    { title: "Boss Mode Comfort", subtitle: "Uncompromising Space", description: "The Safari offers ventilated seats in both the first and second rows. The exclusive Boss Mode lets the rear passenger adjust the co-driver seat for maximum legroom.", image: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/safari-interior-lifestyle-resized-new.jpg", isReversed: false },
-    { title: "Level 2 ADAS", subtitle: "Intelligent Protection", description: "Advanced Driver Assistance Systems including Autonomous Emergency Braking and Lane Keep Assist act as your co-pilot, keeping you and your family safe.", image: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg", isReversed: true }
+    { title: "Boss Mode Comfort", subtitle: "Uncompromising Space", description: "The Safari offers ventilated seats in both the first and second rows. The exclusive Boss Mode lets the rear passenger adjust the co-driver seat for maximum legroom.", image: "/assets/images/lifestyle/safari-interior-lifestyle-resized-new.jpg", isReversed: false },
+    { title: "Level 2 ADAS", subtitle: "Intelligent Protection", description: "Advanced Driver Assistance Systems including Autonomous Emergency Braking and Lane Keep Assist act as your co-pilot, keeping you and your family safe.", image: "/assets/images/lifestyle/terrain-repsonse.jpg", isReversed: true }
   ],
     textFeatures: [
       {
@@ -279,7 +279,7 @@ export const vehicles: Vehicle[] = [
     category: 'SUVs',
     price: '₹ 8.10 Lakh',
     availability: 'In Showroom',
-    image: '/assets/images/cars/creative-plus-24-dehradun-dew_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/nexon-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'nexon',
     detailedSpecs: {
     engine: { displacement: '1.2L Revotron', maxPower: '120 PS', maxTorque: '170 Nm', cylinders: '3', transmission: '7-Speed DCA', driveModes: 'Eco, City, Sport' },
@@ -296,8 +296,8 @@ export const vehicles: Vehicle[] = [
     },
     features: ['Bi-Function LED', 'Sequential Indicators', 'Hidden Wiper', 'Ventilated Seats'],
     exclusiveFeatures: [
-    { title: "Bi-Function LED", subtitle: "Striking Visibility", description: "The aggressive front fascia features sequential LED DRLs and bi-function LED headlamps that give the Nexon a distinctly modern and commanding road presence.", image: '/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg', isReversed: false },
-    { title: "Hidden Wiper", subtitle: "Clean Aesthetics", description: "The seamlessly integrated hidden rear wiper not only improves the aerodynamic profile of the car but ensures the rear glass design remains uncluttered and sleek.", image: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg", isReversed: true },
+    { title: "Bi-Function LED", subtitle: "Striking Visibility", description: "The aggressive front fascia features sequential LED DRLs and bi-function LED headlamps that give the Nexon a distinctly modern and commanding road presence.", image: '/assets/images/lifestyle/terrain-repsonse.jpg', isReversed: false },
+    { title: "Hidden Wiper", subtitle: "Clean Aesthetics", description: "The seamlessly integrated hidden rear wiper not only improves the aerodynamic profile of the car but ensures the rear glass design remains uncluttered and sleek.", image: "/assets/images/lifestyle/terrain-repsonse.jpg", isReversed: true },
     { title: "Aggressive Lighting", subtitle: "Cut Through the Fog", description: "The sharp LED headlights are engineered to cut through dense fog and rain, providing unparalleled visibility on winding mountain roads.", image: "/assets/images/cars/mountain_fog_car_headlights.jpg", isReversed: false }
   ],
     textFeatures: [
@@ -333,7 +333,7 @@ export const vehicles: Vehicle[] = [
     category: 'SUVs',
     price: '₹ 6.12 Lakh',
     availability: 'In Showroom',
-    image: '/assets/images/cars/punch-mce-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/punch-new-revised-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'punch',
     detailedSpecs: {
     engine: { displacement: '1.2L Revotron', maxPower: '88 PS', maxTorque: '115 Nm', cylinders: '3', transmission: '5-Speed AMT', driveModes: 'Eco, City' },
@@ -350,8 +350,8 @@ export const vehicles: Vehicle[] = [
     },
     features: ['90-degree Doors', 'iRA Tech', 'Auto Headlamps', 'Rain Sensing Wipers'],
     exclusiveFeatures: [
-    { title: "90-Degree Doors", subtitle: "Effortless Access", description: "The Punch makes ingress and egress a breeze for all ages with doors that open to a full 90 degrees, offering unparalleled access to the cabin.", image: '/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg', isReversed: false },
-    { title: "Commanding Stance", subtitle: "SUV DNA", description: "Despite its compact footprint, the Punch features high ground clearance, a tall seating position, and rugged body cladding, staying true to authentic SUV DNA.", image: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg", isReversed: true }
+    { title: "90-Degree Doors", subtitle: "Effortless Access", description: "The Punch makes ingress and egress a breeze for all ages with doors that open to a full 90 degrees, offering unparalleled access to the cabin.", image: '/assets/images/lifestyle/terrain-repsonse.jpg', isReversed: false },
+    { title: "Commanding Stance", subtitle: "SUV DNA", description: "Despite its compact footprint, the Punch features high ground clearance, a tall seating position, and rugged body cladding, staying true to authentic SUV DNA.", image: "/assets/images/lifestyle/terrain-repsonse.jpg", isReversed: true }
   ],
     textFeatures: [
       {
@@ -386,7 +386,7 @@ export const vehicles: Vehicle[] = [
     category: 'Hatchbacks & Sedans',
     price: '₹ 6.65 Lakh',
     availability: 'In Showroom • Express 48h Delivery',
-    image: '/assets/images/cars/all-new-altroz-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/altroz-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'altroz',
     detailedSpecs: {
     engine: { displacement: '1.2L i-Turbo', maxPower: '110 PS', maxTorque: '140 Nm', cylinders: '3', transmission: '6-Speed DCA', driveModes: 'Eco, City' },
@@ -403,7 +403,7 @@ export const vehicles: Vehicle[] = [
     },
     features: ['ALFA Arch', 'Laser Cut Alloys', 'iRA Tech', 'Harman Audio'],
     exclusiveFeatures: [
-    { title: "ALFA Architecture", subtitle: "Gold Standard of Safety", description: "Built on the Agile Light Flexible Advanced (ALFA) architecture, the Altroz delivers exceptional structural rigidity and a 5-star Global NCAP safety rating.", image: '/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg', isReversed: false },
+    { title: "ALFA Architecture", subtitle: "Gold Standard of Safety", description: "Built on the Agile Light Flexible Advanced (ALFA) architecture, the Altroz delivers exceptional structural rigidity and a 5-star Global NCAP safety rating.", image: '/assets/images/lifestyle/terrain-repsonse.jpg', isReversed: false },
     { title: "Acoustic Harmony", subtitle: "Premium Audio", description: "Enjoy your favorite tracks in high fidelity with the custom-tuned Harman audio system, integrated seamlessly into the Altroz's premium dashboard.", image: "/assets/images/cars/altroz-audio-ai.jpg", isReversed: true }
   ],
     textFeatures: [
@@ -439,7 +439,7 @@ export const vehicles: Vehicle[] = [
     category: 'Hatchbacks & Sedans',
     price: '₹ 5.65 Lakh',
     availability: 'In Showroom',
-    image: '/assets/images/cars/the-next-gen-tiago-navigation_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/tiago-new-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'tiago',
     detailedSpecs: {
     engine: { displacement: '1.2L Revotron', maxPower: '86 PS', maxTorque: '113 Nm', cylinders: '3', transmission: '5-Speed AMT', driveModes: 'City' },
@@ -456,8 +456,8 @@ export const vehicles: Vehicle[] = [
     },
     features: ['Projector Headlamps', 'Auto Fold ORVM', 'Digital Instrument', '8-Speaker Harman'],
     exclusiveFeatures: [
-    { title: "Dynamic Handling", subtitle: "Zippy & Fun", description: "The Tiago offers a peppy Revotron engine paired with a precisely tuned suspension, making city commutes fun and effortless.", image: '/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg', isReversed: false },
-    { title: "Digital Cluster", subtitle: "Information at a Glance", description: "Stay informed with the segment-first fully digital instrument cluster that displays vital vehicle information in a crisp, modern layout.", image: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/safari-interior-lifestyle-resized-new.jpg", isReversed: true }
+    { title: "Dynamic Handling", subtitle: "Zippy & Fun", description: "The Tiago offers a peppy Revotron engine paired with a precisely tuned suspension, making city commutes fun and effortless.", image: '/assets/images/lifestyle/terrain-repsonse.jpg', isReversed: false },
+    { title: "Digital Cluster", subtitle: "Information at a Glance", description: "Stay informed with the segment-first fully digital instrument cluster that displays vital vehicle information in a crisp, modern layout.", image: "/assets/images/lifestyle/safari-interior-lifestyle-resized-new.jpg", isReversed: true }
   ],
     textFeatures: [
       {
@@ -492,7 +492,7 @@ export const vehicles: Vehicle[] = [
     category: 'SUVs',
     price: '₹ 9.99 Lakh',
     availability: 'Pre-book Now • Priority Delivery',
-    image: '/assets/images/cars/curvv-new-pure-grey_$HC-264-129-D$_fit_fit_fmt_avif-alpha.avif',
+    image: '/assets/images/cars/d-curvv-banner-kv_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif',
     slug: 'curvv',
     isNew: true,
     detailedSpecs: {
@@ -510,7 +510,7 @@ export const vehicles: Vehicle[] = [
     },
     features: ['Aero Insert Alloys', 'Smart E-Shifter', 'Ventilated Seats', 'Level 2 ADAS'],
     exclusiveFeatures: [
-    { title: "Coupe-SUV Silhouette", subtitle: "A Class Apart", description: "The Curvv breaks conventions with its striking coupe-SUV roofline, blending the toughness of an SUV with the elegance of a sports coupe.", image: '/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg', isReversed: false },
+    { title: "Coupe-SUV Silhouette", subtitle: "A Class Apart", description: "The Curvv breaks conventions with its striking coupe-SUV roofline, blending the toughness of an SUV with the elegance of a sports coupe.", image: '/assets/images/lifestyle/terrain-repsonse.jpg', isReversed: false },
     { title: "Cinematic Cockpit", subtitle: "Future of Infotainment", description: "Experience a fully digital cockpit featuring an illuminated steering wheel logo, intuitive digital controls, and dual ultra-wide displays for navigation and entertainment.", image: "/assets/images/cars/curvv-interior-ai.jpg", isReversed: true }
   ],
     textFeatures: [

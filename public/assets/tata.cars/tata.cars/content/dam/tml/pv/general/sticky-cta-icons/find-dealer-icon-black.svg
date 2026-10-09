@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 40" width="50" height="40" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Map pin outer shape -->
-  <path d="M25 4 C18 4 13 9.5 13 16 C13 24 25 36 25 36 C25 36 37 24 37 16 C37 9.5 32 4 25 4 Z"/>
-  <!-- Inner circle -->
-  <circle cx="25" cy="16" r="5"/>
-</svg>

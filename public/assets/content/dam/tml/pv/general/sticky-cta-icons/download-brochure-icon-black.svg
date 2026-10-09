@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 40" width="50" height="40" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Left page -->
-  <path d="M25 8 L25 34 Q16 32 10 33 L10 8 Q16 7 25 8 Z"/>
-  <!-- Right page -->
-  <path d="M25 8 L25 34 Q34 32 40 33 L40 8 Q34 7 25 8 Z"/>
-  <!-- Spine line at center bottom -->
-  <line x1="25" y1="8" x2="25" y2="34"/>
-</svg>

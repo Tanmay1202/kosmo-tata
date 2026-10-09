@@ -91,10 +91,6 @@ export default function RootLayout({
         h-full antialiased scroll-smooth
       `}
     >
-      <head>
-        <link rel="preload" href="/assets/3d/TIAGO_STUDIO_HDR_4k_NEW_4.hdr" as="fetch" crossOrigin="anonymous" />
-        <link rel="preload" href="/assets/3d/basis_transcoder.wasm" as="fetch" crossOrigin="anonymous" />
-      </head>
       <body className="min-h-full flex flex-col bg-white text-slate-900 font-supreme">
         <DealershipProvider>
           <MegaMenuNav />
@@ -108,5 +104,4 @@ export default function RootLayout({
     </html>
   );
 }
-
 

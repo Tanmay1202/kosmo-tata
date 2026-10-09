@@ -6,13 +6,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MoveHorizontal } from "lucide-react";
 
 interface ThreeViewer360Props {
-  colorHex: string;
   fallbackImage: string;
   rotationArray?: string[]; // Array of 36 images
   hasDayNight?: boolean;
 }
 
-export default function ThreeViewer360({ colorHex, fallbackImage, rotationArray, hasDayNight }: ThreeViewer360Props) {
+export default function ThreeViewer360({ fallbackImage, rotationArray, hasDayNight }: ThreeViewer360Props) {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
@@ -163,4 +162,3 @@ export default function ThreeViewer360({ colorHex, fallbackImage, rotationArray,
     </div>
   );
 }
-

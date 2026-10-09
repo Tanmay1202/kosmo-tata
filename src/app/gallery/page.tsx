@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function GalleryPage() {
   const images = [
-    { src: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/safari-interior-lifestyle-resized-new.jpg", category: "Showroom" },
-    { src: "/assets/_external/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg", category: "Vehicles" },
+    { src: "/assets/images/lifestyle/safari-interior-lifestyle-resized-new.jpg", category: "Showroom" },
+    { src: "/assets/images/lifestyle/terrain-repsonse.jpg", category: "Vehicles" },
     { src: "/assets/images/cars/premium-ventilated-leatherette-seats-1_$IMG-474-248-D$_fit_crop_fmt_avif-alpha", category: "Vehicles" },
     { src: "/assets/images/cars/aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha", category: "Deliveries" },
     { src: "/assets/images/cars/premium-openview-dashboard_$IMG-474-248-D$_fit_crop_fmt_avif-alpha", category: "Showroom" },
-    { src: "/assets/images/cars/sierrakv-14-1_$TT-614-400-D$_fit_crop_fmt_avif-alpha", category: "Events" }
+    { src: "/assets/images/cars/sierra-horses_$B-1228-488-D$_fit_crop_fmt_avif-alpha.avif", category: "Events" }
   ];
 
   return (

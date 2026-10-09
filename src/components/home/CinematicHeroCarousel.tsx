@@ -27,7 +27,7 @@ const slides: SlideData[] = [
     name: "S I E R R A",
     tagline: "Powered Tailgate with Gesture Control",
     price: "13.99",
-    image: "/assets/images/cars/sierrakv-14-1_$TT-614-400-D$_fit_crop_fmt_avif-alpha.avif",
+    image: "/assets/images/cars/sierra-horses_$B-1228-488-D$_fit_crop_fmt_avif-alpha.avif",
   },
   {
     id: "harrier",

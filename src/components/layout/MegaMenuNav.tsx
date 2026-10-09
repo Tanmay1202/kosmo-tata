@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { Search, Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useDealership } from "@/context/DealershipContext";
 
 export default function MegaMenuNav() {
@@ -57,20 +56,8 @@ export default function MegaMenuNav() {
               ))}
             </nav>
 
-            {/* Right Icons */}
+            {/* Menu */}
             <div className="flex items-center space-x-6">
-              <div className="hidden sm:block border-r border-white/30 pr-6">
-                <Image 
-                  src="/assets/images/icons/tata-blue-small-logo.png" 
-                  alt="Tata Logo" 
-                  width={40} 
-                  height={40} 
-                  className="brightness-0 invert object-contain" 
-                />
-              </div>
-              <button aria-label="Search" className="hover:text-white/80 transition-colors">
-                <Search className="w-6 h-6" />
-              </button>
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Menu" 

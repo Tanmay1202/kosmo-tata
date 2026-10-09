@@ -6,35 +6,35 @@ import { useRef } from "react";
 
 const lifestyleImages = [
   {
-    src: "/tata.cars/content/dam/tml/pv/products/lifestyle-images/harrier-product-lifestyle-resized.jpg",
+    src: "/assets/images/lifestyle/harrier-product-lifestyle-resized.jpg",
     alt: "Harrier Lifestyle",
     span: "col-span-12 md:col-span-8 row-span-2",
     title: "Born of Pedigree",
     subtitle: "The All-New Harrier"
   },
   {
-    src: "/tata.cars/content/dam/tml/pv/products/punch/year-2026/ice/promoting-vc/lifestyle/new-punch-lifestyle-first.png",
+    src: "/assets/images/lifestyle/new-punch-lifestyle-first.png",
     alt: "Punch Lifestyle",
     span: "col-span-12 md:col-span-4 row-span-1",
     title: "Vibes with You",
     subtitle: "Tata Punch"
   },
   {
-    src: "/tata.cars/content/dam/tml/pv/products/lifestyle-images/safari-interior-lifestyle-resized-new.jpg",
+    src: "/assets/images/lifestyle/safari-interior-lifestyle-resized-new.jpg",
     alt: "Safari Interior",
     span: "col-span-12 md:col-span-4 row-span-1",
     title: "Reclaim Your Life",
     subtitle: "Premium Safari Interior"
   },
   {
-    src: "/tata.cars/content/dam/tml/pv/products/curvv/year-2026/ice/promoting-vc/lifestyle/lifestyle-1.jpg",
+    src: "/assets/images/lifestyle/lifestyle-1.jpg",
     alt: "Curvv Lifestyle",
     span: "col-span-12 md:col-span-6 row-span-1",
     title: "Shape Your Future",
     subtitle: "Tata Curvv"
   },
   {
-    src: "/tata.cars/content/dam/tml/pv/products/lifestyle-images/terrain-repsonse.jpg",
+    src: "/assets/images/lifestyle/terrain-repsonse.jpg",
     alt: "Terrain Response",
     span: "col-span-12 md:col-span-6 row-span-1",
     title: "Conquer Any Terrain",

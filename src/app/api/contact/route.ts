@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+export const runtime = 'nodejs';
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -32,16 +34,17 @@ export async function POST(request: Request) {
       }
     `;
 
-    // Configure the transporter
-    // It will gracefully fall back if SMTP details are missing, 
-    // simply logging the intended message, preventing build/runtime crashes.
     if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.log('--- Email Simulation (SMTP credentials missing) ---');
-      console.log('To:', 'customercare@kosmotata.in');
-      console.log('Subject:', subject);
-      console.log('HTML Body:', emailHtml);
-      console.log('---------------------------------------------------');
-      return NextResponse.json({ success: true, message: 'Simulated email sent successfully.' }, { status: 200 });
+      if (process.env.NODE_ENV === 'production') {
+        console.error('SMTP configuration is missing; contact form email cannot be sent.');
+        return NextResponse.json(
+          { success: false, error: 'Email delivery is temporarily unavailable.' },
+          { status: 503 }
+        );
+      }
+
+      console.info('SMTP is not configured; skipping email delivery in development.');
+      return NextResponse.json({ success: true, message: 'Development submission received.' });
     }
 
     const transporter = nodemailer.createTransport({

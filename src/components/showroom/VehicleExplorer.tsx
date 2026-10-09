@@ -1,38 +1,22 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import ThreeViewer360 from "./ThreeViewer360";
-import ColorVariantSelector, { ColorOption } from "./ColorVariantSelector";
 import { vehicles } from "@/data/vehicles";
 import ShowroomStockWidget from "@/components/conversion/ShowroomStockWidget";
-
-
-const TATA_COLORS: ColorOption[] = [
-  { id: "pristine-white", name: "Pristine White", hex: "#F4F4F4" },
-  { id: "daytona-grey", name: "Daytona Grey", hex: "#4A4D54" },
-  { id: "oberon-black", name: "Oberon #DARK", hex: "#111111" },
-  { id: "flame-red", name: "Flame Red", hex: "#B71C1C" },
-  { id: "empowered-oxide", name: "Empowered Oxide", hex: "#8D948D" },
-];
 
 const SHOWROOM_MODELS = vehicles.map(v => v.slug);
 
 export default function VehicleExplorer() {
   const [activeModelId, setActiveModelId] = useState("curvv");
-  const [activeColorId, setActiveColorId] = useState("pristine-white");
 
   const activeVehicle = vehicles.find((v) => v.slug === activeModelId) || vehicles[0];
-  
-  useEffect(() => {
-    if (activeVehicle.colors && activeVehicle.colors.length > 0) {
-      setActiveColorId(activeVehicle.colors[0].name.toLowerCase().replace(/\s+/g, '-'));
-    }
-  }, [activeVehicle]);
-
-  const activeColorObj = activeVehicle.colors.find((c) => c.name.toLowerCase().replace(/\s+/g, '-') === activeColorId) || activeVehicle.colors[0];
-  const activeColorHex = activeColorObj?.hex || "#F4F4F4";
+  const defaultColor = activeVehicle.colors[0];
+  const rotationArray = defaultColor?.rotationArray?.length
+    ? defaultColor.rotationArray
+    : activeVehicle.rotationArray;
 
   const specs = {
     engine: activeVehicle.engineSpecs.engineOrBattery,
@@ -94,10 +78,9 @@ export default function VehicleExplorer() {
               className="absolute inset-0"
             >
               <ThreeViewer360 
-                colorHex={activeColorHex} 
                 fallbackImage={activeVehicle.image} 
-                rotationArray={activeColorObj?.rotationArray || []}
-                hasDayNight={activeColorObj?.hasDayNight || false}
+                rotationArray={rotationArray}
+                hasDayNight={defaultColor?.hasDayNight || false}
               />
             </motion.div>
           </AnimatePresence>
@@ -121,13 +104,6 @@ export default function VehicleExplorer() {
           </div>
         </div>
 
-        {/* Color Configurator */}
-        <ColorVariantSelector 
-          colors={activeVehicle.colors.map(c => ({ id: c.name.toLowerCase().replace(/\s+/g, '-'), name: c.name, hex: c.hex }))} 
-          selectedColor={activeColorId} 
-          onSelect={setActiveColorId} 
-        />
-
         <div className="mt-8 mb-16">
           <Link 
             href={`/models/${activeModelId}`}
@@ -144,4 +120,3 @@ export default function VehicleExplorer() {
     </section>
   );
 }
-

@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kosmo Tata
+
+Next.js dealership website for the Tata Motors vehicle range.
 
 ## Getting Started
 
-First, run the development server:
+Requires Node.js 20.9 or newer. Install dependencies and start the development server:
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy `.env.example` to `.env.local` and provide SMTP credentials to deliver contact and booking submissions. In development, submissions are acknowledged without sending email when SMTP is not configured. In production, configure the SMTP variables before deploying; the API returns an error instead of claiming delivery when credentials are missing.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy to Vercel
 
-## Learn More
+1. Import the repository into Vercel using Git integration. Vercel detects Next.js and uses `npm run build` automatically.
+2. Set the project's Node.js version to **20.x** or newer.
+3. Add `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, and `SMTP_PASS` under **Settings → Environment Variables** for each environment that needs to send email. Keep credentials server-side; do not prefix them with `NEXT_PUBLIC_`.
+4. Deploy and verify the site and a test contact submission.
 
-To learn more about Next.js, take a look at the following resources:
+Run a production build locally before deployment:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```

@@ -7,7 +7,7 @@ export default function HomeYoutubeSection() {
     <section className="w-full relative aspect-[21/9] max-h-[600px] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/_external/s7ap1.scene7.com/is/image/tatamotors/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha"
+          src="/assets/images/cars/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif"
           alt="Tata Factory Worker"
           fill
           className="object-cover"

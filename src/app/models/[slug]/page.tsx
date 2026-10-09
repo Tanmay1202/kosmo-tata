@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ThreeViewer360 from "@/components/showroom/ThreeViewer360";
-import { useState, useEffect, use } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, use } from "react";
 
 export default function ModelPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = use(params);
@@ -16,7 +15,10 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
     notFound();
   }
 
-  const [selectedColor, setSelectedColor] = useState(vehicle.colors?.[0]);
+  const defaultColor = vehicle.colors[0];
+  const rotationArray = defaultColor?.rotationArray?.length
+    ? defaultColor.rotationArray
+    : vehicle.rotationArray;
 
   // Hide the global MegaMenuNav on this page so we can use a custom one
   useEffect(() => {
@@ -48,23 +50,6 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
             ))}
           </nav>
           
-          <div className="flex items-center space-x-6 flex-shrink-0">
-             <div className="hidden sm:block border-r border-white/30 pr-6">
-               <Image 
-                 src="/assets/images/icons/tata-blue-small-logo.png" 
-                 alt="Tata Logo" 
-                 width={40} 
-                 height={40} 
-                 className="brightness-0 invert object-contain" 
-               />
-             </div>
-             <button aria-label="Search" className="hover:text-white/80 transition-colors">
-               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-             </button>
-             <button aria-label="Menu" className="hover:text-white/80 transition-colors">
-               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-             </button>
-          </div>
         </div>
       </header>
 
@@ -75,39 +60,10 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
           {/* Viewer */}
           <div className="w-full h-[300px] md:h-[500px] relative mb-8">
              <ThreeViewer360 
-               colorHex={selectedColor?.hex || "#FFFFFF"}
                fallbackImage={vehicle.image}
-               rotationArray={selectedColor?.rotationArray || vehicle.rotationArray}
-               hasDayNight={selectedColor?.hasDayNight}
+               rotationArray={rotationArray}
+               hasDayNight={defaultColor?.hasDayNight}
              />
-          </div>
-
-          {/* Drag to rotate instructions */}
-          <div className="flex flex-col items-center mb-8 gap-2">
-            <div className="flex items-center gap-4 text-slate-800">
-              <ChevronLeft className="w-5 h-5" />
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 11V6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6V10M9 11V14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14V10M9 11H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              <ChevronRight className="w-5 h-5" />
-            </div>
-            <p className="font-semibold text-lg text-slate-900">Drag to rotate</p>
-          </div>
-          
-          {/* Color Selector */}
-          <div className="flex flex-wrap justify-center items-center gap-4 mb-10">
-            {vehicle.colors?.map((color) => (
-              <button
-                key={color.name}
-                onClick={() => setSelectedColor(color)}
-                className={`w-8 h-8 rounded-full border border-gray-300 shadow-sm transition-transform flex items-center justify-center ${selectedColor?.name === color.name ? 'ring-2 ring-slate-900 scale-110' : 'hover:scale-105'}`}
-                style={{ backgroundColor: color.hex }}
-                aria-label={`Select ${color.name}`}
-                title={color.name}
-              >
-                {selectedColor?.name === color.name && (
-                  <svg className="w-4 h-4 text-white drop-shadow-md mix-blend-difference" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                )}
-              </button>
-            ))}
           </div>
 
         </div>
@@ -325,5 +281,3 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
     </div>
   );
 }
-
-

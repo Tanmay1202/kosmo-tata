@@ -44,6 +44,18 @@ next-env.d.ts
 public/newest_scrap.zip
 public/newest_scrap/
 public/latest.scrap/
+public/scrap-review/
+public/tata.cars/
+public/assets/_external/
+public/assets/tata.cars/
+public/assets/newest_scrap/
+public/assets/etc.clientlibs/
+public/assets/aeris/
+public/assets/configurator/
+public/assets/organisation/
+public/assets/libs/
+public/assets/content/
+public/assets/3d/
 
 # fluff and references
 ui-reference/
@@ -53,5 +65,3 @@ artifacts/
 !postcss.config.js
 *.txt
 !robots.txt
-
-public/scrap-review/

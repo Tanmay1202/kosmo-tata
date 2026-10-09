@@ -10,7 +10,7 @@ const features = [
     id: "adas",
     title: "Advanced Driver Assistance",
     desc: "Level 2 ADAS with 10+ intelligent features including Adaptive Cruise Control and Auto Emergency Braking.",
-    img: "/assets/_external/s7ap1.scene7.com/is/image/tatamotors/electronic-stability-program-esp-1_$IMG-474-248-D$_fit_crop_fmt_avif-alpha",
+    img: "/assets/images/features/electronic-stability-program-esp-1.avif",
     colSpan: "col-span-1 md:col-span-2",
     hotspots: [
       { x: 35, y: 45, label: "Radar Sensor" },
@@ -21,7 +21,7 @@ const features = [
     id: "camera",
     title: "360° SVS Camera",
     desc: "High-definition surround view system with blind spot monitoring.",
-    img: "/assets/_external/s7ap1.scene7.com/is/image/tatamotors/360-svs-hd-camera-with-multiple-3d-2d-views_$IMG-474-248-D$_fit_crop_fmt_avif-alpha",
+    img: "/assets/images/features/360-svs-hd-camera.avif",
     colSpan: "col-span-1",
     hotspots: [
       { x: 50, y: 60, label: "HD Wide Camera" }
@@ -31,7 +31,7 @@ const features = [
     id: "interior",
     title: "Aero-Lux Ventilated Seats",
     desc: "Premium leatherette seating with multi-zone temperature control.",
-    img: "/assets/_external/s7ap1.scene7.com/is/image/tatamotors/premium-ventilated-leatherette-seats-1_$IMG-474-248-D$_fit_crop_fmt_avif-alpha",
+    img: "/assets/images/cars/premium-ventilated-leatherette-seats-1_$IMG-474-248-D$_fit_crop_fmt_avif-alpha.avif",
     colSpan: "col-span-1",
     hotspots: [
       { x: 45, y: 55, label: "Perforated Leatherette" },
@@ -42,7 +42,7 @@ const features = [
     id: "connected",
     title: "iRA Connected Tech",
     desc: "Next-gen telematics with remote commands and smartwatch integration.",
-    img: "/assets/_external/s7ap1.scene7.com/is/image/tatamotors/connected-vehicle-technology-with-ira_$IMG-474-248-D$_fit_crop_fmt_avif-alpha",
+    img: "/assets/images/features/connected-vehicle-technology-with-ira.avif",
     colSpan: "col-span-1 md:col-span-2",
     hotspots: [
       { x: 55, y: 35, label: "10.25\" Touchscreen" },

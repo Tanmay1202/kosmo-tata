@@ -10,7 +10,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           {/* We'll use a generic tata showroom or lifestyle image here */}
           <Image
-            src="/tata.cars/content/dam/tml/pv/products/lifestyle-images/harrier-product-lifestyle-resized.jpg"
+            src="/assets/images/lifestyle/harrier-product-lifestyle-resized.jpg"
             alt="Kosmo Tata Dealership"
             fill
             className="object-cover opacity-80"
