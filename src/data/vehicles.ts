@@ -14,9 +14,6 @@ export interface VehicleSpecs {
   bootCapacity: string;
 }
 
-    gncapRating: string;
-  };
-}
 
 export interface DetailedSpecs {
   engine: { displacement: string; maxPower: string; maxTorque: string; cylinders: string; transmission: string; driveModes: string; };
@@ -39,7 +36,6 @@ export interface Vehicle {
   
   // Extended Details
   engineSpecs: VehicleSpecs;
-  detailedSpecs?: DetailedSpecs;
   detailedSpecs?: DetailedSpecs;
   features: string[];
   colors: VehicleColor[];
