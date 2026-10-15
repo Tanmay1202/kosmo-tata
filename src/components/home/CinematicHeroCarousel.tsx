@@ -40,7 +40,15 @@ export default function CinematicHeroCarousel() {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [current]);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  };
 
   return (
     /* Fits the viewport completely by subtracting the sticky header height (64px mobile, 72px desktop) */
@@ -92,6 +100,30 @@ export default function CinematicHeroCarousel() {
           </div>
         </div>
       ))}
+
+      {/* Previous Slide Arrow Button */}
+      <button
+        onClick={prevSlide}
+        aria-label="Previous slide"
+        type="button"
+        className="absolute left-2.5 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-0.5 transition-transform">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+
+      {/* Next Slide Arrow Button */}
+      <button
+        onClick={nextSlide}
+        aria-label="Next slide"
+        type="button"
+        className="absolute right-2.5 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
 
       {/* Pagination indicators */}
       <div className="absolute bottom-3 sm:bottom-4 md:bottom-5 left-0 right-0 z-30 flex justify-center gap-2.5 sm:gap-3">
