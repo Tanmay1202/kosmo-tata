@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2f3032] text-white pt-16 pb-8 text-sm md:text-base font-medium">
+    <footer className="bg-[#2f3032] text-white pt-12 md:pt-16 pb-6 md:pb-8 text-sm md:text-base font-medium">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10 md:mb-12">
           
           {/* Models */}
           <div>
@@ -69,8 +69,16 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-start text-sm text-white">
-          <p>For Roadside Assistance, call on - <br/>18002098282</p>
+        <div className="border-t border-gray-600/70 pt-6 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs md:text-sm text-gray-300 pr-28 sm:pr-36 md:pr-44">
+          <p>
+            For Roadside Assistance, call on -{" "}
+            <a href="tel:18002098282" className="text-white font-semibold hover:underline">
+              1800 209 8282
+            </a>
+          </p>
+          <p className="text-gray-400 text-xs">
+            &copy; {new Date().getFullYear()} Kosmo Tata Motors. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

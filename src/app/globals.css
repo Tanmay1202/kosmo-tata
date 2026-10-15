@@ -35,8 +35,12 @@
   }
 }
 
-/* Smooth scrolling */
-html { scroll-behavior: smooth; }
+/* Smooth scrolling & footer-matched canvas overscroll to eliminate blank space below footer */
+html {
+  scroll-behavior: smooth;
+  background-color: #2f3032;
+  overscroll-behavior-y: none;
+}
 
 /* Utility: hide scrollbar while keeping scroll functionality */
 @layer utilities {

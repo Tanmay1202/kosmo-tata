@@ -97,10 +97,10 @@ export default function RootLayout({
       className={`
         ${parallelDisplay.variable}
         ${supreme.variable}
-        h-full antialiased scroll-smooth
+        h-full antialiased scroll-smooth bg-[#2f3032]
       `}
     >
-      <body className="min-h-full flex flex-col bg-white text-slate-900 font-supreme">
+      <body className="min-h-screen flex flex-col bg-white text-slate-900 font-supreme">
         <DealershipProvider>
           <MegaMenuNav />
           <main className="flex-grow">
