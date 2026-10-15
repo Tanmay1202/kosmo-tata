@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,6 +34,7 @@ const slides: SlideData[] = [
 
 export default function CinematicHeroCarousel() {
   const [current, setCurrent] = useState(0);
+  const touchStartXRef = useRef<number | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -50,37 +51,74 @@ export default function CinematicHeroCarousel() {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartXRef.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartXRef.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartXRef.current - touchEndX;
+    // 50px swipe threshold
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    touchStartXRef.current = null;
+  };
+
   return (
-    /* Fits the viewport completely by subtracting the sticky header height (64px mobile, 72px desktop) */
-    <div className="relative w-full h-[calc(100vh-64px)] md:h-[calc(100vh-72px)] h-[calc(100dvh-64px)] md:h-[calc(100dvh-72px)] min-h-[460px] bg-[#000] overflow-hidden">
+    /* Fits viewport completely, mobile height adapts cleanly */
+    <div
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      className="relative w-full h-[calc(100vh-64px)] md:h-[calc(100vh-72px)] h-[calc(100dvh-64px)] md:h-[calc(100dvh-72px)] min-h-[480px] md:min-h-[500px] bg-[#000] overflow-hidden"
+    >
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-700 ease-in-out flex flex-col md:block ${
             index === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
           }`}
         >
-          <Image
-            src={slide.image}
-            alt={slide.name}
-            fill
-            className="object-cover object-center"
-            priority={index === 0}
-            sizes="100vw"
-          />
+          {/* Subtle ambient glow behind image on mobile so there are no stark voids */}
+          <div className="absolute inset-0 z-0 md:hidden overflow-hidden pointer-events-none">
+            <Image
+              src={slide.image}
+              alt=""
+              fill
+              className="object-cover blur-3xl opacity-30 scale-125"
+              aria-hidden="true"
+            />
+          </div>
 
-          {/* Content Overlay — sized and padded to stay strictly inside viewport */}
-          <div className="absolute inset-0 z-20 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 flex flex-col justify-end pb-12 sm:pb-14 md:pb-16 lg:pb-20">
-            <div className="max-w-xl text-white">
+          {/* Foreground Car Image — fully contained on mobile to guarantee zero cutoff; full-bleed cover on desktop */}
+          <div className="relative w-full flex-1 min-h-0 flex items-center justify-center p-2 sm:p-4 md:p-0 md:absolute md:inset-0 md:w-full md:h-full z-10">
+            <Image
+              src={slide.image}
+              alt={slide.name}
+              fill
+              className="object-contain md:object-cover object-center"
+              priority={index === 0}
+              sizes="100vw"
+            />
+          </div>
+
+          {/* Content Overlay — placed cleanly below the car on mobile, anchored to bottom on desktop */}
+          <div className="w-full shrink-0 z-20 px-4 pt-2 pb-12 sm:pb-14 text-center md:text-left md:absolute md:inset-0 md:max-w-[1400px] md:mx-auto md:px-8 md:flex md:flex-col md:justify-end md:pb-16 lg:pb-20">
+            <div className="max-w-xl mx-auto md:mx-0 text-white">
               <h1 className="text-2xl min-[380px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold uppercase tracking-[0.08em] sm:tracking-[0.1em] mb-1.5 sm:mb-2 drop-shadow-lg leading-tight whitespace-nowrap">
                 {slide.name}
               </h1>
-              <p className="text-sm sm:text-lg md:text-2xl font-light tracking-wide mb-4 sm:mb-6 drop-shadow-md line-clamp-2">
+              <p className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl font-light tracking-wide mb-3 sm:mb-6 drop-shadow-md line-clamp-2 text-white/90">
                 {slide.tagline}
               </p>
 
-              {/* Buttons — stacked on xs, side-by-side on sm+ */}
-              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 w-full max-w-xs sm:max-w-md">
+              {/* Buttons — side-by-side with responsive text */}
+              <div className="flex flex-row gap-2.5 sm:gap-3 w-full max-w-xs sm:max-w-md mx-auto md:mx-0">
                 <Link
                   href={`/book-test-drive?model=${slide.id}`}
                   className="flex-1 text-center py-2.5 sm:py-3.5 md:py-4 bg-white text-slate-900 font-bold uppercase tracking-widest hover:bg-gray-100 transition-colors text-xs sm:text-sm md:text-base rounded-sm shadow-md"
@@ -104,7 +142,7 @@ export default function CinematicHeroCarousel() {
         onClick={prevSlide}
         aria-label="Previous slide"
         type="button"
-        className="absolute left-2.5 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg"
+        className="absolute left-2.5 sm:left-4 md:left-6 top-[38%] md:top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg touch-manipulation"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-0.5 transition-transform">
           <polyline points="15 18 9 12 15 6" />
@@ -116,7 +154,7 @@ export default function CinematicHeroCarousel() {
         onClick={nextSlide}
         aria-label="Next slide"
         type="button"
-        className="absolute right-2.5 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg"
+        className="absolute right-2.5 sm:right-4 md:right-6 top-[38%] md:top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg touch-manipulation"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform">
           <polyline points="9 18 15 12 9 6" />

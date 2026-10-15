@@ -1,21 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { vehicles } from "@/data/vehicles";
 import { openWhatsApp } from "@/utils/whatsapp";
 import { ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
 
-export default function BookOnlinePage() {
+function BookOnlineForm() {
+  const searchParams = useSearchParams();
+  const preselectedModel = searchParams?.get("model");
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
-    model: "harrier",
+    model: preselectedModel || "harrier",
     fuelType: "Petrol / Diesel",
     color: "",
     address: "",
     comments: ""
   });
+
+  useEffect(() => {
+    if (preselectedModel) {
+      setFormData(prev => ({ ...prev, model: preselectedModel }));
+    }
+  }, [preselectedModel]);
+
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [lastWhatsAppUrl, setLastWhatsAppUrl] = useState<string>("");
 
@@ -238,5 +249,13 @@ ${formData.comments ? `📝 *Notes:* ${formData.comments}` : ""}`;
 
       </div>
     </div>
+  );
+}
+
+export default function BookOnlinePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gray-50 pt-32 text-center text-slate-500">Loading booking form...</div>}>
+      <BookOnlineForm />
+    </Suspense>
   );
 }

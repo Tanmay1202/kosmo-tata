@@ -198,7 +198,7 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
                 </ul>
                 <button
                   type="button"
-                  onClick={() => openModal("test-drive", vehicle.slug)}
+                  onClick={() => openModal("book-now", vehicle.slug)}
                   className="w-full py-3 bg-slate-900 border-2 border-slate-900 text-white font-bold uppercase tracking-widest text-sm hover:bg-slate-800 transition-colors mt-auto rounded-lg shadow-sm"
                 >
                   Book Now

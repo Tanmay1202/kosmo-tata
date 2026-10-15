@@ -16,9 +16,9 @@ export default function FloatingBookNowButton() {
 
       {/* Main floating button */}
       <button
-        onClick={() => openModal("test-drive")}
+        onClick={() => openModal("book-now")}
         type="button"
-        aria-label="Book a Test Drive Now"
+        aria-label="Book a Tata Vehicle Now"
         className="relative flex items-center gap-2.5 px-5 py-3 sm:px-6 sm:py-3.5 bg-gradient-to-r from-[#1328E0] to-blue-600 hover:from-blue-600 hover:to-[#1328E0] text-white font-bold text-sm sm:text-base rounded-full shadow-[0_8px_25px_rgba(19,40,224,0.5)] border border-white/25 hover:scale-105 active:scale-95 transition-all duration-300 touch-manipulation focus:outline-none focus:ring-4 focus:ring-blue-400/50"
       >
         {/* Pulsing live availability dot */}

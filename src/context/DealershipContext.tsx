@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState } from "react";
 
-export type ModalMode = "test-drive" | "trade-in" | "emi" | "service";
+export type ModalMode = "book-now" | "test-drive" | "trade-in" | "emi" | "service";
 
 interface DealershipContextType {
   isModalOpen: boolean;
