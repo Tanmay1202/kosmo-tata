@@ -60,8 +60,6 @@ export default function CinematicHeroCarousel() {
             index === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
           }`}
         >
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10 z-10" />
           <Image
             src={slide.image}
             alt={slide.name}

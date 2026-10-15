@@ -40,8 +40,17 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-full flex items-center justify-between">
           {/* Left: Logo */}
           <div className="flex-1 flex items-center">
-            <Link href="/" className="font-display text-lg md:text-xl font-bold tracking-[0.15em] uppercase whitespace-nowrap">
-              tata.cars
+            <Link href="/" className="flex items-center group touch-manipulation" aria-label="tata.cars">
+              <div className="relative h-7 sm:h-8 md:h-9 w-28 sm:w-32 md:w-36 shrink-0">
+                <Image
+                  src="/logo/tata-cars-logo.png"
+                  alt="tata.cars"
+                  fill
+                  className="object-contain object-left group-hover:opacity-90 transition-opacity"
+                  sizes="(max-width: 768px) 120px, 150px"
+                  priority
+                />
+              </div>
             </Link>
           </div>
 
