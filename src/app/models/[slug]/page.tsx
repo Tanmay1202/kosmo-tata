@@ -71,8 +71,26 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
             ))}
           </nav>
 
-          {/* Right: Mobile hamburger / spacer on desktop */}
-          <div className="flex-1 flex items-center justify-end">
+          {/* Right: Kosmo Tata Logo & Mobile Menu Hamburger */}
+          <div className="flex-1 flex items-center justify-end gap-3 sm:gap-4">
+            <Link
+              href="/"
+              className="flex items-center group touch-manipulation"
+              title="Kosmo Tata"
+              aria-label="Kosmo Tata"
+            >
+              <div className="relative h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 rounded-full overflow-hidden bg-white/10 p-0.5 border border-white/30 shadow-sm backdrop-blur-sm group-hover:border-white transition-all shrink-0">
+                <Image
+                  src="/logo/logo.jpeg"
+                  alt="Kosmo Tata Logo"
+                  fill
+                  className="object-cover rounded-full"
+                  sizes="40px"
+                  priority
+                />
+              </div>
+            </Link>
+
             <button
               className="lg:hidden p-2 -mr-2 hover:text-white/80 transition-colors touch-manipulation"
               onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useDealership } from "@/context/DealershipContext";
 
@@ -38,7 +39,7 @@ export default function MegaMenuNav() {
       <header id="global-mega-menu" className="sticky top-0 left-0 right-0 z-50 bg-tata-blue shadow-md text-white">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between h-16 md:h-[72px]">
-            {/* Left — Logo (flex-1 balances the right spacer for true center alignment) */}
+            {/* Left — Logo (flex-1 balances the right section for true center alignment) */}
             <div className="flex-1 flex items-center">
               <Link
                 href="/"
@@ -63,8 +64,26 @@ export default function MegaMenuNav() {
               ))}
             </nav>
 
-            {/* Right — Hamburger on mobile / equal flex-1 spacer on desktop to keep nav centered */}
-            <div className="flex-1 flex items-center justify-end">
+            {/* Right — Kosmo Tata Logo & Mobile Menu Button */}
+            <div className="flex-1 flex items-center justify-end gap-3 sm:gap-4">
+              <Link
+                href="/"
+                className="flex items-center group touch-manipulation"
+                title="Kosmo Tata"
+                aria-label="Kosmo Tata"
+              >
+                <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full overflow-hidden bg-white/10 p-0.5 border border-white/30 shadow-sm backdrop-blur-sm group-hover:border-white transition-all shrink-0">
+                  <Image
+                    src="/logo/logo.jpeg"
+                    alt="Kosmo Tata Logo"
+                    fill
+                    className="object-cover rounded-full"
+                    sizes="40px"
+                    priority
+                  />
+                </div>
+              </Link>
+
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
@@ -88,7 +107,24 @@ export default function MegaMenuNav() {
           aria-label="Navigation menu"
           className="fixed inset-0 top-16 md:top-[72px] bg-slate-900 text-white z-40 overflow-y-auto lg:hidden"
         >
-          <nav className="px-4 py-8 flex flex-col">
+          <nav className="px-4 py-6 flex flex-col">
+            {/* Dealership brand header in mobile drawer */}
+            <div className="flex items-center gap-3 pb-6 border-b border-white/10">
+              <div className="relative h-11 w-11 rounded-full overflow-hidden border border-white/30 shadow-sm shrink-0">
+                <Image
+                  src="/logo/logo.jpeg"
+                  alt="Kosmo Tata Logo"
+                  fill
+                  className="object-cover rounded-full"
+                  sizes="44px"
+                />
+              </div>
+              <div>
+                <p className="font-display font-bold text-base tracking-widest uppercase">Kosmo Tata</p>
+                <p className="text-xs text-white/60">Official Dealership</p>
+              </div>
+            </div>
+
             {links.map((link) => (
               <Link
                 key={link.name}
