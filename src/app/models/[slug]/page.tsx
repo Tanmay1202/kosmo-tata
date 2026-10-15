@@ -7,8 +7,10 @@ import { notFound } from "next/navigation";
 import ThreeViewer360 from "@/components/showroom/ThreeViewer360";
 import { useEffect, use } from "react";
 import { Menu } from "lucide-react";
+import { useDealership } from "@/context/DealershipContext";
 
 export default function ModelPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { openModal } = useDealership();
   const resolvedParams = use(params);
   const vehicle = vehicles.find((v) => v.slug === resolvedParams.slug);
 
@@ -194,8 +196,12 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-3 bg-white border-2 border-slate-900 text-slate-900 font-bold uppercase tracking-widest text-sm hover:bg-slate-900 hover:text-white transition-colors mt-auto">
-                  View Details
+                <button
+                  type="button"
+                  onClick={() => openModal("test-drive", vehicle.slug)}
+                  className="w-full py-3 bg-slate-900 border-2 border-slate-900 text-white font-bold uppercase tracking-widest text-sm hover:bg-slate-800 transition-colors mt-auto rounded-lg shadow-sm"
+                >
+                  Book Now
                 </button>
               </div>
             ))}

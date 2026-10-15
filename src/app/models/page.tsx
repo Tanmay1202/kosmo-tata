@@ -79,7 +79,7 @@ export default function ModelsPage() {
                             Test Drive
                           </Link>
                           <Link 
-                            href={`/contact-us?model=${vehicle.slug}`}
+                            href={`/book-online?model=${vehicle.slug}`}
                             className="flex-1 text-center py-3 border border-slate-200 text-slate-900 font-medium rounded-lg hover:bg-slate-50 transition-colors"
                           >
                             Book Now

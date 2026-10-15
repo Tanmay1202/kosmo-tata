@@ -4,6 +4,7 @@ import "./globals.css";
 import MegaMenuNav from "@/components/layout/MegaMenuNav";
 import { DealershipProvider } from "@/context/DealershipContext";
 import LeadCaptureModal from "@/components/conversion/LeadCaptureModal";
+import FloatingBookNowButton from "@/components/ui/FloatingBookNowButton";
 import Footer from "@/components/layout/Footer";
 
 // â”€â”€â”€ Brand Fonts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -107,6 +108,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <LeadCaptureModal />
+          <FloatingBookNowButton />
         </DealershipProvider>
       </body>
     </html>
