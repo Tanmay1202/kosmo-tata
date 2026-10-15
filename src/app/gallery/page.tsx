@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 import ThreeViewer360 from "@/components/showroom/ThreeViewer360";
 import { vehicles } from "@/data/vehicles";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 type GalleryCategory =
   | "Vehicles"
@@ -94,6 +95,47 @@ export default function GalleryPage() {
       ? media
       : media.filter((item) => item.category === activeFilter);
 
+  const selectedMediaIndex = useMemo(() => {
+    if (!selectedMedia) return -1;
+    return visibleMedia.findIndex(
+      (m) => m.title === selectedMedia.title && m.category === selectedMedia.category
+    );
+  }, [selectedMedia, visibleMedia]);
+
+  const goToPrevMedia = useCallback(() => {
+    if (selectedMediaIndex === -1 || visibleMedia.length <= 1) return;
+    const prevIndex = (selectedMediaIndex - 1 + visibleMedia.length) % visibleMedia.length;
+    setSelectedMedia(visibleMedia[prevIndex]);
+  }, [selectedMediaIndex, visibleMedia]);
+
+  const goToNextMedia = useCallback(() => {
+    if (selectedMediaIndex === -1 || visibleMedia.length <= 1) return;
+    const nextIndex = (selectedMediaIndex + 1) % visibleMedia.length;
+    setSelectedMedia(visibleMedia[nextIndex]);
+  }, [selectedMediaIndex, visibleMedia]);
+
+  useEffect(() => {
+    if (!selectedMedia) return;
+
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedMedia(null);
+      } else if (e.key === "ArrowLeft") {
+        goToPrevMedia();
+      } else if (e.key === "ArrowRight") {
+        goToNextMedia();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedMedia, goToPrevMedia, goToNextMedia]);
+
   return (
     <div className="min-h-screen bg-white px-4 pb-24 pt-32 text-slate-900 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -146,7 +188,7 @@ export default function GalleryPage() {
                 key={`${item.category}-${item.title}`}
                 type="button"
                 onClick={() => setSelectedMedia(item)}
-                className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tata-blue"
+                className="group relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tata-blue"
                 aria-label={`View ${item.title}`}
               >
                 <Image
@@ -154,7 +196,7 @@ export default function GalleryPage() {
                   alt={item.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-5 pb-5 pt-16 text-white">
                   <span className="block text-xs font-semibold uppercase tracking-widest text-white/75">
@@ -175,42 +217,102 @@ export default function GalleryPage() {
 
       {selectedMedia && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-8"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-2 sm:p-4 md:p-6"
           role="dialog"
           aria-modal="true"
           aria-label={selectedMedia.title}
           onClick={() => setSelectedMedia(null)}
         >
-          <button
-            type="button"
-            onClick={() => setSelectedMedia(null)}
-            className="absolute right-4 top-4 z-20 rounded-full border border-white/40 px-4 py-2 text-sm font-semibold text-white hover:bg-white/15"
-            aria-label="Close gallery view"
-          >
-            Close
-          </button>
+          {/* Main Modal Dialog Box */}
           <div
-            className="relative flex h-full max-h-[85vh] w-full max-w-6xl flex-col"
+            className="relative flex flex-col w-full max-w-6xl h-[92dvh] max-h-[92dvh] sm:h-[88dvh] sm:max-h-[88dvh] bg-slate-950/95 rounded-2xl sm:rounded-3xl border border-white/10 overflow-hidden shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <h2 className="mb-3 text-center text-lg font-semibold text-white">
-              {selectedMedia.title}
-            </h2>
-            <div className="relative min-h-0 flex-1 overflow-hidden rounded-xl bg-slate-950">
+            {/* Header: Title, Category, and Close Button */}
+            <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 border-b border-white/10 bg-slate-900/60 shrink-0">
+              <div className="min-w-0 flex-1">
+                <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-tata-blue block">
+                  {selectedMedia.category}
+                </span>
+                <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white truncate">
+                  {selectedMedia.title}
+                </h2>
+              </div>
+
+              {/* Close Button — prominent and touch-friendly */}
+              <button
+                type="button"
+                onClick={() => setSelectedMedia(null)}
+                className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/30 text-white font-medium text-xs sm:text-sm backdrop-blur-sm border border-white/20 transition-all touch-manipulation"
+                aria-label="Close photo view"
+              >
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="hidden min-[400px]:inline">Close</span>
+              </button>
+            </div>
+
+            {/* Media Canvas Container — guarantees 100% visible image without cutoff on mobile */}
+            <div className="relative flex-1 w-full min-h-0 bg-black/90 flex items-center justify-center p-2 sm:p-4 overflow-hidden select-none">
               {isRotation(selectedMedia) ? (
-                <ThreeViewer360
-                  fallbackImage={selectedMedia.frames[0]}
-                  rotationArray={selectedMedia.frames}
-                />
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <ThreeViewer360
+                    fallbackImage={selectedMedia.frames[0]}
+                    rotationArray={selectedMedia.frames}
+                  />
+                </div>
               ) : (
-                <Image
-                  src={selectedMedia.src}
-                  alt={selectedMedia.title}
-                  fill
-                  sizes="100vw"
-                  className="object-contain"
-                />
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src={selectedMedia.src}
+                    alt={selectedMedia.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 1200px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
               )}
+
+              {/* Left / Right Navigation Controls */}
+              {visibleMedia.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      goToPrevMedia();
+                    }}
+                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center border border-white/25 backdrop-blur-sm transition-all duration-200 active:scale-95 touch-manipulation focus:outline-none focus:ring-2 focus:ring-white shadow-lg"
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2.5} />
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      goToNextMedia();
+                    }}
+                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center border border-white/25 backdrop-blur-sm transition-all duration-200 active:scale-95 touch-manipulation focus:outline-none focus:ring-2 focus:ring-white shadow-lg"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2.5} />
+                  </button>
+                </>
+              )}
+            </div>
+
+            {/* Footer Bar: Instructional hint & counter */}
+            <div className="flex items-center justify-between px-4 py-2.5 sm:px-6 sm:py-3 border-t border-white/10 bg-slate-900/60 text-xs sm:text-sm text-slate-400 shrink-0">
+              <span className="truncate">
+                {isRotation(selectedMedia)
+                  ? `Interactive 360° · Drag horizontally to rotate`
+                  : "Tap arrows to browse · Full original view"}
+              </span>
+              <span className="shrink-0 ml-2 font-mono text-[11px] sm:text-xs text-white/70">
+                {selectedMediaIndex + 1} / {visibleMedia.length}
+              </span>
             </div>
           </div>
         </div>

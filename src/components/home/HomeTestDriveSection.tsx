@@ -8,14 +8,15 @@ export default function HomeTestDriveSection() {
 
   return (
     <section className="w-full flex flex-col md:flex-row bg-[#FAFAFA]">
-      {/* Image — full width on mobile, half on md+ */}
-      <div className="w-full md:w-1/2 relative min-h-[280px] sm:min-h-[360px] md:min-h-[500px]">
+      {/* Image — full width and natural aspect ratio on mobile so it is never cutoff, half on md+ */}
+      <div className="w-full md:w-1/2 relative aspect-[3/2] sm:aspect-[16/10] md:aspect-auto md:min-h-[500px]">
         <Image
           src="/assets/images/lifestyle/book-a-test-drive.png"
           alt="Book a Test Drive Experience"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           sizes="(max-width: 768px) 100vw, 50vw"
+          priority
         />
       </div>
 

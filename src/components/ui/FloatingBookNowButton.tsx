@@ -2,12 +2,15 @@
 
 import { useDealership } from "@/context/DealershipContext";
 import { Sparkles } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function FloatingBookNowButton() {
   const { openModal } = useDealership();
+  const pathname = usePathname();
+  const isModelDetail = Boolean(pathname?.startsWith("/models/") && pathname !== "/models");
 
   return (
-    <div className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-40 group">
+    <div className={`fixed ${isModelDetail ? "bottom-20 sm:bottom-20" : "bottom-5 sm:bottom-7"} right-4 sm:right-7 z-40 group`}>
       {/* Outer ambient glow ring */}
       <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 opacity-70 blur-md group-hover:opacity-100 transition duration-500 group-hover:duration-200 animate-pulse" />
 

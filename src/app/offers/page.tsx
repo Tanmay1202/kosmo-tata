@@ -14,14 +14,14 @@ export default function OffersPage() {
       title: "EV Exchange Program",
       description: "Upgrade your old ICE vehicle to a Tata EV and get an exclusive exchange bonus of ₹50,000.",
       validity: "Valid till 30th Nov",
-      image: "/assets/images/cars/aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha",
+      image: "/assets/images/cars/aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif",
       models: ["Nexon EV", "Aeris"]
     },
     {
       title: "Corporate Discount",
       description: "Special corporate pricing for employees of top MNCs and government officials.",
       validity: "Ongoing",
-      image: "/assets/images/cars/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha",
+      image: "/assets/images/cars/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif",
       models: ["All Models"]
     }
   ];
