@@ -8,7 +8,6 @@ interface SlideData {
   id: string;
   name: string;
   tagline: string;
-  price: string;
   image: string;
 }
 
@@ -17,21 +16,18 @@ const slides: SlideData[] = [
     id: "aeris",
     name: "A E R I S",
     tagline: "DEFEAT BORING",
-    price: "5.29",
     image: "/assets/images/cars/aeris-i-petrol-banner-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif",
   },
   {
     id: "sierra",
     name: "S I E R R A",
     tagline: "Powered Tailgate with Gesture Control",
-    price: "13.99",
     image: "/assets/images/cars/sierra-horses_$B-1228-488-D$_fit_crop_fmt_avif-alpha.avif",
   },
   {
     id: "harrier",
     name: "H A R R I E R",
     tagline: "Above All.",
-    price: "15.49",
     image: "/assets/images/cars/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif",
   },
 ];
@@ -70,16 +66,11 @@ export default function CinematicHeroCarousel() {
           {/* Content Overlay — sized and padded to stay strictly inside viewport */}
           <div className="absolute inset-0 z-20 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 flex flex-col justify-end pb-12 sm:pb-14 md:pb-16 lg:pb-20">
             <div className="max-w-xl text-white">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold uppercase tracking-[0.1em] mb-1.5 sm:mb-2 drop-shadow-lg leading-tight">
+              <h1 className="text-2xl min-[380px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold uppercase tracking-[0.08em] sm:tracking-[0.1em] mb-1.5 sm:mb-2 drop-shadow-lg leading-tight whitespace-nowrap">
                 {slide.name}
               </h1>
               <p className="text-sm sm:text-lg md:text-2xl font-light tracking-wide mb-4 sm:mb-6 drop-shadow-md line-clamp-2">
                 {slide.tagline}
-              </p>
-
-              {/* Mobile price indicator */}
-              <p className="sm:hidden text-white/90 text-sm font-semibold mb-3">
-                Starting at ₹{slide.price} Lakh*
               </p>
 
               {/* Buttons — stacked on xs, side-by-side on sm+ */}
@@ -97,12 +88,6 @@ export default function CinematicHeroCarousel() {
                   Explore
                 </Link>
               </div>
-            </div>
-
-            {/* Price badge — shown on sm+ screens */}
-            <div className="absolute bottom-10 sm:bottom-12 md:bottom-16 right-4 sm:right-6 md:right-8 text-right hidden sm:block">
-              <p className="text-white/80 text-xs md:text-sm uppercase tracking-widest mb-1">Price starts at</p>
-              <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold">₹{slide.price} Lakh*</p>
             </div>
           </div>
         </div>
