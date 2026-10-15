@@ -5,15 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ThreeViewer360 from "@/components/showroom/ThreeViewer360";
-import { useEffect, useState, use } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, use } from "react";
+import { Menu } from "lucide-react";
 
 export default function ModelPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = use(params);
   const vehicle = vehicles.find((v) => v.slug === resolvedParams.slug);
-
-  // All hooks must be called unconditionally before any early return
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   // Hide the global MegaMenuNav on this page so we can use a model-specific one
   useEffect(() => {
@@ -23,16 +20,6 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
       if (globalNav) globalNav.style.display = "";
     };
   }, []);
-
-  // Scroll lock when mobile nav is open
-  useEffect(() => {
-    if (isMobileNavOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => { document.body.style.overflow = ""; };
-  }, [isMobileNavOpen]);
 
   // Perform the not-found check AFTER all hooks have been called
   if (!vehicle) {
@@ -91,39 +78,19 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
               </div>
             </Link>
 
-            <button
-              className="lg:hidden p-2 -mr-2 hover:text-white/80 transition-colors touch-manipulation"
-              onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-              aria-label={isMobileNavOpen ? "Close navigation" : "Open navigation"}
-              aria-expanded={isMobileNavOpen}
+            {/* Three lines icon leading to models page */}
+            <Link
+              href="/models"
+              className="hover:text-white/80 transition-colors p-1.5 sm:p-2 -mr-1 sm:-mr-2 touch-manipulation flex items-center text-white"
+              aria-label="Explore all models"
+              title="Explore all models"
             >
-              {isMobileNavOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              <Menu className="w-7 h-7 md:w-8 md:h-8" strokeWidth={2.2} />
+            </Link>
           </div>
         </div>
       </header>
 
-      {/* Mobile in-page navigation dropdown */}
-      {isMobileNavOpen && (
-        <div className="fixed inset-0 top-16 bg-[#1e34d6]/95 text-white z-40 lg:hidden flex flex-col px-4 py-6 gap-2">
-          {navSections.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              onClick={() => setIsMobileNavOpen(false)}
-              className="text-xl font-bold tracking-widest uppercase border-b border-white/20 py-4"
-            >
-              {item}
-            </a>
-          ))}
-          <Link
-            href="/"
-            className="mt-4 text-base text-white/60 hover:text-white transition-colors"
-          >
-            ← Back to tata.cars
-          </Link>
-        </div>
-      )}
 
       {/* 360 Configurator */}
       <section id="overview" className="w-full bg-[#f5f5f5] pt-6 md:pt-8 pb-12 md:pb-16">
