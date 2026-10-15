@@ -69,7 +69,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-start text-sm text-white max-w-sm">
+        <div className="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-start text-sm text-white">
           <p>For Roadside Assistance, call on - <br/>18002098282</p>
         </div>
       </div>

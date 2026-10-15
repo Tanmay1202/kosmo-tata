@@ -82,7 +82,7 @@ export default function LeadCaptureModal() {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-4xl bg-white border border-gray-200 shadow-sm border border-gray-200 rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row"
+            className="relative w-full max-w-4xl bg-white border border-gray-200 shadow-2xl rounded-3xl overflow-hidden flex flex-col md:flex-row max-h-[90dvh] md:max-h-none overflow-y-auto md:overflow-visible"
           >
             {/* Left Panel: Vehicle Showcase */}
             <div className="hidden md:flex md:w-2/5 relative bg-gradient-to-br from-tata-blue/20 to-obsidian border-r border-white/5 p-8 flex-col justify-between">
@@ -192,7 +192,7 @@ export default function LeadCaptureModal() {
                             <label className="text-[10px] text-slate-600 uppercase tracking-widest ml-1">Preferred Date</label>
                             <div className="relative">
                               <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                              <input name="date" type="date" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors [color-scheme:dark]" />
+                              <input name="date" type="date" required className="w-full bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-3 text-slate-900 focus:outline-none focus:border-tata-blue transition-colors [color-scheme:light]" />
                             </div>
                           </div>
                           <div className="space-y-1 relative">

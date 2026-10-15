@@ -43,12 +43,13 @@ export default function QuickActionRail() {
   const handleActionClick = (e: React.MouseEvent, action: ActionItem) => {
     if (action.id === "test-drive" || action.id === "trade-in") {
       e.preventDefault();
-      openModal(action.id as any);
+      openModal(action.id as "test-drive" | "trade-in");
     }
   };
 
   return (
-    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3">
+    /* Hidden on mobile (sm and below) to avoid overlapping content on small screens */
+    <div className="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-40 flex-col gap-3">
       {actions.map((action, index) => (
         <motion.div
           key={action.id}
@@ -57,9 +58,9 @@ export default function QuickActionRail() {
           transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
           className="relative group flex items-center justify-end"
         >
-          {/* Tooltip Label (Expandable on hover) */}
+          {/* Tooltip Label — appears to the left on hover; constrained so it doesn't overflow */}
           <div className="absolute right-14 pr-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pr-4 transition-all duration-300">
-            <div className="bg-white-light/90 backdrop-blur-md border border-gray-200 text-slate-900 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded shadow-xl whitespace-nowrap">
+            <div className="bg-white/90 backdrop-blur-md border border-gray-200 text-slate-900 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded shadow-xl whitespace-nowrap">
               {action.label}
             </div>
           </div>
@@ -68,15 +69,15 @@ export default function QuickActionRail() {
           <Link
             href={action.href}
             onClick={(e) => handleActionClick(e, action)}
-            className={`w-12 h-12 bg-white border border-gray-200 shadow-sm flex items-center justify-center rounded-full text-slate-700 transition-all duration-300 border border-gray-200 bg-white-light/60 hover:bg-white relative overflow-hidden ${action.color}`}
+            className={`w-11 h-11 bg-white border border-gray-200 shadow-sm flex items-center justify-center rounded-full text-slate-700 transition-all duration-300 hover:bg-white relative overflow-hidden ${action.color}`}
             aria-label={action.label}
           >
-            <Image 
-              src={action.iconPath} 
-              alt={action.label} 
-              width={20} 
-              height={20} 
-              className="w-5 h-5 transition-transform group-hover:scale-110 invert brightness-200" 
+            <Image
+              src={action.iconPath}
+              alt={action.label}
+              width={20}
+              height={20}
+              className="w-5 h-5 transition-transform group-hover:scale-110 invert brightness-200"
             />
           </Link>
         </motion.div>

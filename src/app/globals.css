@@ -20,14 +20,37 @@
 @layer base {
   body {
     @apply bg-white text-slate-900 font-supreme;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-wide;
   }
+
+  /* Ensure images are responsive by default */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-
+/* Smooth scrolling */
 html { scroll-behavior: smooth; }
 
+/* Utility: hide scrollbar while keeping scroll functionality */
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;             /* Chrome/Safari/Opera */
+  }
 
+  /* Touch-friendly tap target size */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
