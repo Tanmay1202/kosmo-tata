@@ -79,13 +79,13 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
               title="Kosmo Tata"
               aria-label="Kosmo Tata"
             >
-              <div className="relative h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 rounded-full overflow-hidden bg-white/10 p-0.5 border border-white/30 shadow-sm backdrop-blur-sm group-hover:border-white transition-all shrink-0">
+              <div className="relative h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 shrink-0">
                 <Image
-                  src="/logo/logo.jpeg"
+                  src="/logo/logo.png"
                   alt="Kosmo Tata Logo"
                   fill
-                  className="object-cover rounded-full"
-                  sizes="40px"
+                  className="object-contain brightness-110 drop-shadow-sm group-hover:scale-105 transition-transform"
+                  sizes="44px"
                   priority
                 />
               </div>

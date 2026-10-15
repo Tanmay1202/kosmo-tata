@@ -72,13 +72,13 @@ export default function MegaMenuNav() {
                 title="Kosmo Tata"
                 aria-label="Kosmo Tata"
               >
-                <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-full overflow-hidden bg-white/10 p-0.5 border border-white/30 shadow-sm backdrop-blur-sm group-hover:border-white transition-all shrink-0">
+                <div className="relative h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 shrink-0">
                   <Image
-                    src="/logo/logo.jpeg"
+                    src="/logo/logo.png"
                     alt="Kosmo Tata Logo"
                     fill
-                    className="object-cover rounded-full"
-                    sizes="40px"
+                    className="object-contain brightness-110 drop-shadow-sm group-hover:scale-105 transition-transform"
+                    sizes="48px"
                     priority
                   />
                 </div>
@@ -110,13 +110,13 @@ export default function MegaMenuNav() {
           <nav className="px-4 py-6 flex flex-col">
             {/* Dealership brand header in mobile drawer */}
             <div className="flex items-center gap-3 pb-6 border-b border-white/10">
-              <div className="relative h-11 w-11 rounded-full overflow-hidden border border-white/30 shadow-sm shrink-0">
+              <div className="relative h-12 w-12 shrink-0">
                 <Image
-                  src="/logo/logo.jpeg"
+                  src="/logo/logo.png"
                   alt="Kosmo Tata Logo"
                   fill
-                  className="object-cover rounded-full"
-                  sizes="44px"
+                  className="object-contain"
+                  sizes="48px"
                 />
               </div>
               <div>
