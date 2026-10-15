@@ -11,8 +11,8 @@ export default function HomeTestDriveSection() {
       {/* Image — full width on mobile, half on md+ */}
       <div className="w-full md:w-1/2 relative min-h-[280px] sm:min-h-[360px] md:min-h-[500px]">
         <Image
-          src="/assets/images/cars/harrier-d_$BA-1920-925-D$_fit_crop_fmt_avif-alpha.avif"
-          alt="Test Drive Experience"
+          src="/assets/images/lifestyle/book-a-test-drive.png"
+          alt="Book a Test Drive Experience"
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
