@@ -71,11 +71,11 @@ export default function CinematicHeroCarousel() {
   };
 
   return (
-    /* Fits viewport completely, mobile height adapts cleanly */
+    /* Fits viewport cleanly on desktop; compact snug layout on mobile with zero voids */
     <div
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className="relative w-full h-[calc(100vh-64px)] md:h-[calc(100vh-72px)] h-[calc(100dvh-64px)] md:h-[calc(100dvh-72px)] min-h-[480px] md:min-h-[500px] bg-[#000] overflow-hidden"
+      className="relative w-full h-[375px] min-[390px]:h-[395px] sm:h-[460px] md:h-[calc(100vh-72px)] md:min-h-[520px] bg-[#000] overflow-hidden"
     >
       {slides.map((slide, index) => (
         <div
@@ -95,8 +95,8 @@ export default function CinematicHeroCarousel() {
             />
           </div>
 
-          {/* Foreground Car Image — fully contained on mobile to guarantee zero cutoff; full-bleed cover on desktop */}
-          <div className="relative w-full flex-1 min-h-0 flex items-center justify-center p-2 sm:p-4 md:p-0 md:absolute md:inset-0 md:w-full md:h-full z-10">
+          {/* Foreground Car Image — natural aspect ratio on mobile so it starts flush at the top with zero voids; full-bleed cover on desktop */}
+          <div className="relative w-full aspect-[2/1] sm:aspect-[21/9] md:aspect-auto md:absolute md:inset-0 md:w-full md:h-full z-10 shrink-0">
             <Image
               src={slide.image}
               alt={slide.name}
@@ -107,13 +107,13 @@ export default function CinematicHeroCarousel() {
             />
           </div>
 
-          {/* Content Overlay — placed cleanly below the car on mobile, anchored to bottom on desktop */}
-          <div className="w-full shrink-0 z-20 px-4 pt-2 pb-12 sm:pb-14 text-center md:text-left md:absolute md:inset-0 md:max-w-[1400px] md:mx-auto md:px-8 md:flex md:flex-col md:justify-end md:pb-16 lg:pb-20">
+          {/* Content Overlay — placed snugly below the car on mobile, anchored to bottom on desktop */}
+          <div className="w-full shrink-0 z-20 px-4 pt-1 sm:pt-2 pb-6 text-center md:text-left md:absolute md:inset-0 md:max-w-[1400px] md:mx-auto md:px-8 md:flex md:flex-col md:justify-end md:pb-16 lg:pb-20">
             <div className="max-w-xl mx-auto md:mx-0 text-white">
-              <h1 className="text-2xl min-[380px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold uppercase tracking-[0.08em] sm:tracking-[0.1em] mb-1.5 sm:mb-2 drop-shadow-lg leading-tight whitespace-nowrap">
+              <h1 className="text-2xl min-[380px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold uppercase tracking-[0.08em] sm:tracking-[0.1em] mb-1 drop-shadow-lg leading-tight whitespace-nowrap">
                 {slide.name}
               </h1>
-              <p className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl font-light tracking-wide mb-3 sm:mb-6 drop-shadow-md line-clamp-2 text-white/90">
+              <p className="text-xs min-[380px]:text-sm sm:text-lg md:text-2xl font-light tracking-wide mb-3 sm:mb-6 drop-shadow-md line-clamp-1 sm:line-clamp-2 text-white/90">
                 {slide.tagline}
               </p>
 
@@ -121,13 +121,13 @@ export default function CinematicHeroCarousel() {
               <div className="flex flex-row gap-2.5 sm:gap-3 w-full max-w-xs sm:max-w-md mx-auto md:mx-0">
                 <Link
                   href={`/book-test-drive?model=${slide.id}`}
-                  className="flex-1 text-center py-2.5 sm:py-3.5 md:py-4 bg-white text-slate-900 font-bold uppercase tracking-widest hover:bg-gray-100 transition-colors text-xs sm:text-sm md:text-base rounded-sm shadow-md"
+                  className="flex-1 text-center py-2 sm:py-3.5 md:py-4 bg-white text-slate-900 font-bold uppercase tracking-widest hover:bg-gray-100 transition-colors text-xs sm:text-sm md:text-base rounded-sm shadow-md"
                 >
                   Book Test Drive
                 </Link>
                 <Link
                   href={`/models/${slide.id}`}
-                  className="flex-1 text-center py-2.5 sm:py-3.5 md:py-4 border-2 border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-colors text-xs sm:text-sm md:text-base rounded-sm"
+                  className="flex-1 text-center py-2 sm:py-3.5 md:py-4 border-2 border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-colors text-xs sm:text-sm md:text-base rounded-sm"
                 >
                   Explore
                 </Link>
@@ -142,9 +142,9 @@ export default function CinematicHeroCarousel() {
         onClick={prevSlide}
         aria-label="Previous slide"
         type="button"
-        className="absolute left-2.5 sm:left-4 md:left-6 top-[38%] md:top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg touch-manipulation"
+        className="absolute left-2 sm:left-4 md:left-6 top-[27%] sm:top-[28%] md:top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg touch-manipulation"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-0.5 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-0.5 transition-transform">
           <polyline points="15 18 9 12 15 6" />
         </svg>
       </button>
@@ -154,15 +154,15 @@ export default function CinematicHeroCarousel() {
         onClick={nextSlide}
         aria-label="Next slide"
         type="button"
-        className="absolute right-2.5 sm:right-4 md:right-6 top-[38%] md:top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg touch-manipulation"
+        className="absolute right-2 sm:right-4 md:right-6 top-[27%] sm:top-[28%] md:top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 border border-white/20 hover:scale-105 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-white shadow-lg touch-manipulation"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform">
           <polyline points="9 18 15 12 9 6" />
         </svg>
       </button>
 
       {/* Pagination indicators */}
-      <div className="absolute bottom-3 sm:bottom-4 md:bottom-5 left-0 right-0 z-30 flex justify-center gap-2.5 sm:gap-3">
+      <div className="absolute bottom-2 sm:bottom-3 md:bottom-5 left-0 right-0 z-30 flex justify-center gap-2 sm:gap-3">
         {slides.map((_, idx) => (
           <button
             key={idx}
