@@ -50,13 +50,16 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
     <div className="bg-[#f5f5f5] min-h-screen relative pb-24">
       {/* Model-Specific Navbar */}
       <header className="sticky top-0 left-0 right-0 z-50 bg-[#1e34d6] text-white h-16 md:h-[72px]">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-full flex justify-between items-center">
-          <Link href="/" className="font-display text-lg md:text-xl font-bold tracking-[0.15em] uppercase flex-shrink-0">
-            Kosmo.Tata
-          </Link>
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-full flex items-center justify-between">
+          {/* Left: Logo */}
+          <div className="flex-1 flex items-center">
+            <Link href="/" className="font-display text-lg md:text-xl font-bold tracking-[0.15em] uppercase whitespace-nowrap">
+              tata.cars
+            </Link>
+          </div>
 
-          {/* Desktop in-page nav */}
-          <nav className="hidden lg:flex items-center space-x-6 text-sm font-semibold">
+          {/* Center: Desktop in-page nav */}
+          <nav className="hidden lg:flex items-center justify-center space-x-6 text-sm font-semibold">
             {navSections.map((item, i) => (
               <a
                 key={item}
@@ -68,15 +71,17 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
             ))}
           </nav>
 
-          {/* Mobile hamburger for in-page nav */}
-          <button
-            className="lg:hidden p-2 -mr-2 hover:text-white/80 transition-colors touch-manipulation"
-            onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-            aria-label={isMobileNavOpen ? "Close navigation" : "Open navigation"}
-            aria-expanded={isMobileNavOpen}
-          >
-            {isMobileNavOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Right: Mobile hamburger / spacer on desktop */}
+          <div className="flex-1 flex items-center justify-end">
+            <button
+              className="lg:hidden p-2 -mr-2 hover:text-white/80 transition-colors touch-manipulation"
+              onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+              aria-label={isMobileNavOpen ? "Close navigation" : "Open navigation"}
+              aria-expanded={isMobileNavOpen}
+            >
+              {isMobileNavOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -97,7 +102,7 @@ export default function ModelPage({ params }: { params: Promise<{ slug: string }
             href="/"
             className="mt-4 text-base text-white/60 hover:text-white transition-colors"
           >
-            ← Back to Kosmo.Tata
+            ← Back to tata.cars
           </Link>
         </div>
       )}
