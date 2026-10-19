@@ -75,6 +75,15 @@ export const metadata: Metadata = {
     title: "Tata Motors Flagship Digital Dealership | VIP Experience & 360° Showroom",
     description: "Explore the full Tata Motors lineup with our interactive 360° digital configurator, instant trade-in valuation, and VIP doorstep test drive booking.",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 // Viewport export ensures proper mobile meta viewport is set by Next.js
